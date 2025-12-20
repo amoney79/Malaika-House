@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Safari Itinerary | Beach & Wild</title>
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
@@ -13,69 +13,27 @@
     <!-- Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&amp;display=swap"
         rel="stylesheet" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JS (Tailwind Config + Main Logic) -->
+    <script src="js/main.js"></script>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#33f20d",
-                        "background-light": "#f6f8f5",
-                        "background-dark": "#132210",
-                        "surface-light": "#ffffff",
-                        "surface-dark": "#1c3019",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
-    <style>
-        body {
-            min-height: 100vh;
-        }
-
-        .nav-link {
-            font-size: 0.875rem;
-            font-weight: 700;
-            transition: color 0.2s;
-            position: relative;
-            padding-bottom: 0.25rem;
-        }
-
-        .nav-link.active {
-            color: #33f20d;
-        }
-
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #33f20d;
-            border-radius: 9999px;
-        }
-    </style>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-[#121811] dark:text-gray-100 antialiased">
     <!-- Top Navigation Bar -->
     <header
-        class="sticky top-0 z-50 bg-white/95 dark:bg-[#132210]/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm transition-all duration-300">
+        class="sticky top-0 z-50 bg-white/95 dark:bg-[#14532d]/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center gap-2 group transition-transform hover:scale-[1.02]">
                     <div
                         class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
-                        <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                        <span class="material-symbols-outlined text-[#14532d] text-2xl font-bold">beach_access</span>
                     </div>
                     <span
                         class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase group-hover:text-primary transition-colors">Beach
@@ -99,7 +57,7 @@
                         <span class="material-symbols-outlined text-2xl">menu</span>
                     </button>
                     <a href="contact.html"
-                        class="hidden lg:flex h-11 px-6 items-center justify-center rounded-full bg-primary text-[#132210] text-sm font-bold shadow-lg shadow-primary/20 hover:bg-[#2bd90b] transition-all">
+                        class="hidden lg:flex h-11 px-6 items-center justify-center rounded-full bg-primary text-[#14532d] text-sm font-bold shadow-lg shadow-primary/20 hover:bg-[#2bd90b] transition-all">
                         Book Now
                     </a>
                 </div>
@@ -108,11 +66,11 @@
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu"
-            class="fixed inset-0 z-[60] bg-white dark:bg-[#132210] p-6 flex flex-col gap-8 md:hidden transition-all duration-500 translate-x-full">
+            class="fixed inset-0 z-[60] bg-white dark:bg-[#14532d] p-6 flex flex-col gap-8 md:hidden transition-all duration-500 translate-x-full">
             <div class="flex justify-between items-center">
                 <a href="index.html" class="flex items-center gap-2">
                     <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-                        <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                        <span class="material-symbols-outlined text-[#14532d] text-2xl font-bold">beach_access</span>
                     </div>
                     <span
                         class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase transition-colors">Beach
@@ -168,7 +126,7 @@
                             <div class="relative">
                                 <div
                                     class="absolute -left-[3.25rem] top-0 w-10 h-10 rounded-2xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
-                                    <span class="text-[#132210] font-black">01</span>
+                                    <span class="text-[#14532d] font-black">01</span>
                                 </div>
                                 <div class="flex flex-col gap-4">
                                     <h3 class="text-2xl font-black tracking-tight">Arrival & Coastal Check-in</h3>
@@ -188,6 +146,54 @@
                                     <p class="text-lg text-gray-500 font-medium leading-relaxed max-w-xl">Early morning
                                         4x4 safari adventure in Tsavo East. Spot the red elephants and enjoy a bush
                                         breakfast.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package Gallery -->
+                    <div class="flex flex-col gap-12 pt-16 border-t border-gray-100 dark:border-gray-800">
+                        <div class="flex flex-col gap-4">
+                            <h2 class="text-4xl font-black tracking-tight">Package <span
+                                    class="text-primary italic">Gallery</span></h2>
+                            <p class="text-lg text-gray-500 font-medium">Showcasing what's involved in this exclusive
+                                adventure.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuHeMcmgSE9JbXEFWxj5FVxOdsbQcgKH8JADnspxYJZq41ixQWDQNZFGuj72DVPZsRGbXyVkM0uDd3Qp6Qt84N_yjhmhwets-Y1Rhl3Fu2cd-yWYDFR5dAMTEICxKPDystnvmQkDUQ93fBTaxJsvsyLarmp-RUmNZNYZdMf8ioC5PGWBB30xcSzi8jM3IIlFnXwGjZZ-mrH3BXOjJTzyGAx0YLMZM89GdVAVme4WcBKdu9-O6vRcrTHnj5rP1UWhYqe_G3WOk-KqYgE"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Sunset Safaris</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Involved
+                                        activity</p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRuOgHWJStH-vBL47Cwcml9kPhLUAKj_A9TMgdktpb_Djqj6xOQwJNcvAIaeAQkpWxolcGreV68UNV4IeWbQqM4g_pEem17q1ovariE5MNQZH28If-ZWwfphufFpkQmCN2D-toY5CrpT-crHsDDtSm9VvDD1_b8OYj8bQl_fo3ZD2Vo2URNyCs85KKhtCx_47G45k8y7NOJqpRN_vG7vXUDy2SvzrzWule2bA-GLY5P9ZfBahnLIfxM4KBnte8xHeERX46ldWakoQR"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Wild Encounters</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Involved animal
+                                        sightings</p>
+                                </div>
+                            </div>
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKu1OaknehArEC1zF8vJbUeqGsz1cIAUfvJdZb4JlFPh1z7RuFcKAySMHqioNSnsrzKC_Up_Lj5SKLht6JLWfUoAxPMGKEDIYdC28rF9xQRvpU4QWNL6auBp1XV5w4zGrkI6XR_MEyCXz0TOvGgZBqFGFKdRuP3UbRVh90HUq_Dr4X6hGLGpoS-FqrLHHrwPlZ4Z1Xi7PSi9SCfu2Em30zM2hF6BIMVfsthyZGr07_vo5GI9IMI6RMJytzq_yYQTR5uWOS3S4atBST"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Bush Cuisines</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Involved dining
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -224,7 +230,7 @@
                         </div>
 
                         <button
-                            class="h-16 w-full rounded-2xl bg-primary text-[#132210] font-black text-lg shadow-xl shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 transition-all">
+                            class="h-16 w-full rounded-2xl bg-primary text-[#14532d] font-black text-lg shadow-xl shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 transition-all">
                             Book Itinerary
                         </button>
                     </div>
@@ -232,20 +238,6 @@
             </div>
         </div>
     </main>
-
-    <script>
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const closeMenuBtn = document.getElementById('close-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('translate-x-full');
-        });
-
-        closeMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.add('translate-x-full');
-        });
-    </script>
 </body>
 
 </html>

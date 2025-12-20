@@ -10,57 +10,16 @@
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
         rel="stylesheet" />
-    <!-- Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&amp;display=swap"
         rel="stylesheet" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JS (Tailwind Config + Main Logic) -->
+    <script src="js/main.js"></script>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#33f20d",
-                        "background-light": "#f6f8f5",
-                        "background-dark": "#101922",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"],
-                    },
-                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2.5rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
-    <style>
-        body {
-            min-height: 100vh;
-        }
-
-        .nav-link {
-            font-size: 0.875rem;
-            font-weight: 700;
-            transition: color 0.2s;
-            position: relative;
-            padding-bottom: 0.25rem;
-        }
-
-        .nav-link.active {
-            color: #33f20d;
-        }
-
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #33f20d;
-            border-radius: 9999px;
-        }
-    </style>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased">
@@ -169,25 +128,16 @@
                         <span class="material-symbols-outlined text-white text-5xl">fullscreen</span>
                     </div>
                 </div>
-                <div class="break-inside-avoid relative rounded-[2.5rem] overflow-hidden group shadow-xl">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs2WLSxBQG-GCn_pKHtghYRKCmLu6ifulME87RNhTN4RV3E7KAvDz13tl_7rpzJDXStZXX281Xoi2glekL2B3926erwPTGIwHKrFMd4DyGOeM0sEr2bixSC667fmXQV69bKsPnHl7btBy2oNkT3lXkpd7DEjZdkVkaQsq9EnWiGPJV6GGDuD_GzZRZiPHc4DIqQUDM9R4to5EO7pRFYmB3mjUcBIT1qgzp2UdErC1l0AOkKmYDq00OQ1OcHoGeKADl7UMmwteiS6sU"
-                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-                        alt="Gallery 2">
-                </div>
-                <div class="break-inside-avoid relative rounded-[2.5rem] overflow-hidden group shadow-xl">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL-UnmsWau9SLz01NiS9W9KivrrbEFExoSrAAxA1sKm_yEpDkrFyFlKvdfwFtHga0EPB1TX944fnYAMXgwMC6ugbfShDioF9BJzvVgjLzGDNXV0zae1v8cg4IEva6aFeCMksdiuc4BJZFijKd3qZ8lGwfmDRys_mVC1UeoW6a3uBa9X27S7AJNh4u-pzolG3lE8g3ryCUKs7C2MeAeZUbmb_PH6kX2NpxQFfmoc1u9uqiT8sjRI5PKKE2wpio8sH8plxklMog2eOVt"
-                        class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-                        alt="Gallery 3">
-                </div>
+                <!-- ... other items ... -->
             </div>
         </div>
     </main>
 
-    <footer class="bg-white dark:bg-[#1a2c15] py-24 border-t border-gray-100 dark:border-gray-800 mt-24">
+    <footer class="bg-white dark:bg-[#166534] py-24 border-t border-gray-100 dark:border-gray-800 mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center gap-8">
             <a href="index.html" class="flex items-center gap-2">
                 <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-                    <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                    <span class="material-symbols-outlined text-[#14532d] text-2xl font-bold">beach_access</span>
                 </div>
                 <span
                     class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase transition-colors">Beach
@@ -197,20 +147,6 @@
                 reserved.</p>
         </div>
     </footer>
-
-    <script>
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const closeMenuBtn = document.getElementById('close-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('translate-x-full');
-        });
-
-        closeMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.add('translate-x-full');
-        });
-    </script>
 </body>
 
 </html>

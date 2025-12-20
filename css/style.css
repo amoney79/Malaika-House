@@ -1,0 +1,57 @@
+/* Global Custom Styles */
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Navigation Links */
+.nav-link {
+    font-size: 0.875rem;
+    font-weight: 700;
+    transition: color 0.2s;
+    position: relative;
+    padding-bottom: 0.25rem;
+}
+
+.nav-link.active {
+    color: #33f20d;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #33f20d;
+    border-radius: 9999px;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+}

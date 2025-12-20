@@ -5,79 +5,34 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Villa Details | Beach & Wild</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&amp;display=swap"
         rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#33f20d",
-                        "background-light": "#f6f8f5",
-                        "background-dark": "#132210",
-                    },
-                    fontFamily: {
-                        "display": ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
-    <style>
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
 
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css" />
 
-        body {
-            min-height: 100vh;
-        }
-
-        .nav-link {
-            font-size: 0.875rem;
-            font-weight: 700;
-            transition: color 0.2s;
-            position: relative;
-            padding-bottom: 0.25rem;
-        }
-
-        .nav-link.active {
-            color: #33f20d;
-        }
-
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #33f20d;
-            border-radius: 9999px;
-        }
-    </style>
+    <!-- JS (Tailwind Config + Main Logic) -->
+    <script src="js/main.js"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-[#121811] dark:text-white">
     <!-- Top Navigation Bar -->
     <header
-        class="sticky top-0 z-50 bg-white/95 dark:bg-[#132210]/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm transition-all duration-300">
+        class="sticky top-0 z-50 bg-white/95 dark:bg-[#14532d]/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center gap-2 group transition-transform hover:scale-[1.02]">
                     <div
                         class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
-                        <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                        <span class="material-symbols-outlined text-[#14532d] text-2xl font-bold">beach_access</span>
                     </div>
                     <span
                         class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase group-hover:text-primary transition-colors">Beach
@@ -102,12 +57,12 @@
                         <span class="material-symbols-outlined text-2xl">search</span>
                     </button>
                     <a href="contact.html"
-                        class="hidden lg:flex h-11 px-6 items-center justify-center rounded-full bg-primary text-[#132210] text-sm font-bold shadow-lg shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 active:scale-95 transition-all">
+                        class="hidden lg:flex h-11 px-6 items-center justify-center rounded-full bg-primary text-[#14532d] text-sm font-bold shadow-lg shadow-primary/20 hover:bg-[#2bd90b] transition-all">
                         Book Now
                     </a>
                     <!-- Mobile Menu Button -->
                     <button id="mobile-menu-btn"
-                        class="md:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-gray-50 dark:bg-white/5 text-[#121811] dark:text-white hover:bg-primary hover:text-[#132210] transition-all">
+                        class="md:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-gray-50 dark:bg-white/5 text-[#121811] dark:text-white hover:bg-primary transition-all">
                         <span class="material-symbols-outlined text-2xl">menu</span>
                     </button>
                 </div>
@@ -116,11 +71,11 @@
 
         <!-- Mobile Menu Overlay -->
         <div id="mobile-menu"
-            class="fixed inset-0 z-[60] bg-white dark:bg-[#132210] p-6 flex flex-col gap-8 md:hidden transition-all duration-500 translate-x-full">
+            class="fixed inset-0 z-[60] bg-white dark:bg-[#14532d] p-6 flex flex-col gap-8 md:hidden transition-all duration-500 translate-x-full">
             <div class="flex justify-between items-center">
                 <a href="index.html" class="flex items-center gap-2">
                     <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-                        <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                        <span class="material-symbols-outlined text-[#14532d] text-2xl font-bold">beach_access</span>
                     </div>
                     <span
                         class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase transition-colors">Beach
@@ -185,7 +140,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
                 <!-- Content -->
-                <div class="lg:col-span-2 flex flex-col gap-12">
+                <div class="lg:col-span-2 flex flex-col gap-16">
                     <div class="flex flex-col gap-4">
                         <div class="flex items-center gap-2">
                             <div
@@ -207,7 +162,7 @@
                         <p class="text-lg text-gray-500 font-medium leading-[1.8] max-w-2xl">
                             Experience luxury steps away from the ocean. This villa features a private pool, direct
                             beach access, and is located just minutes from the famous Tsavo East National Park safari
-                            gate. Designed with locally sourced materials and modern aesthetics.
+                            gate.
                         </p>
                     </div>
 
@@ -215,25 +170,22 @@
                         class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-gray-100 dark:border-gray-800">
                         <div class="flex flex-col gap-6">
                             <h3 class="text-xl font-black uppercase tracking-widest">Amenities</h3>
-                            <div class="grid grid-cols-1 gap-4">
-                                <div class="flex items-center gap-4 text-gray-500 font-bold">
-                                    <span class="material-symbols-outlined text-primary text-2xl">pool</span>
-                                    Private Infinity Pool
-                                </div>
-                                <div class="flex items-center gap-4 text-gray-500 font-bold">
-                                    <span class="material-symbols-outlined text-primary text-2xl">wifi</span>
-                                    Ultra-fast Starlink Wifi
-                                </div>
-                                <div class="flex items-center gap-4 text-gray-500 font-bold">
-                                    <span class="material-symbols-outlined text-primary text-2xl">restaurant</span>
-                                    Private Chef Available
-                                </div>
-                            </div>
+                            <ul class="flex flex-col gap-4">
+                                <li class="flex items-center gap-4 text-gray-500 font-bold"><span
+                                        class="material-symbols-outlined text-primary text-2xl">pool</span> Private
+                                    Infinity Pool</li>
+                                <li class="flex items-center gap-4 text-gray-500 font-bold"><span
+                                        class="material-symbols-outlined text-primary text-2xl">wifi</span> Starlink
+                                    Wifi</li>
+                                <li class="flex items-center gap-4 text-gray-500 font-bold"><span
+                                        class="material-symbols-outlined text-primary text-2xl">restaurant</span>
+                                    Private Chef</li>
+                            </ul>
                         </div>
                         <div class="flex flex-col gap-6">
                             <h3 class="text-xl font-black uppercase tracking-widest">Experiences</h3>
                             <a href="itinerary.html"
-                                class="p-6 rounded-3xl bg-[#132210] flex items-center justify-between group hover:border-primary border-4 border-transparent transition-all">
+                                class="p-6 rounded-3xl bg-[#14532d] flex items-center justify-between group hover:border-primary border-4 border-transparent transition-all">
                                 <div>
                                     <p class="text-primary text-[10px] font-black uppercase tracking-[0.2em] mb-1">
                                         Exclusive Bundle</p>
@@ -242,6 +194,40 @@
                                 <span
                                     class="material-symbols-outlined text-primary text-3xl transition-transform group-hover:translate-x-2">arrow_forward</span>
                             </a>
+                        </div>
+                    </div>
+
+                    <!-- Package Gallery Section -->
+                    <div class="flex flex-col gap-12 pt-16 border-t border-gray-100 dark:border-gray-800">
+                        <div class="flex flex-col gap-4">
+                            <h2 class="text-4xl font-black tracking-tight">Package <span
+                                    class="text-primary italic">Gallery</span></h2>
+                            <p class="text-lg text-gray-500 font-medium">Showcasing the lifestyle involved in this
+                                premium package.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="group relative aspect-video rounded-[2.5rem] overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9O9WlFIZHAYhWbaEtDoJfldMt6PtvfaFaiASBt407-CEy4reMgfo-d8KgH9u58FK5DmyxUiP4pJ8FsJ9FiSRbHpPoEqT59mnL9XvEZv3qfVbFVTz1vG7I7C1GDEXC90ORCdTzB2_uy8Mcd14LU6sxNV6X0zAvNKPgrRHhTzV5jXDWQHLbyaMnmrqeIUTfH8aOYJSDC9UG25zyaPEWU5Js1RQWu6p_WHj5Uz_VBZM1qAk3DIYl1cLalhJf18Vc7UBLGO823YqQf-lS"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Beachfront">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-10 flex flex-col justify-end">
+                                    <p class="text-white font-black text-2xl">Beachfront Bliss</p>
+                                    <p class="text-primary font-bold uppercase tracking-widest text-xs">Included
+                                        activity</p>
+                                </div>
+                            </div>
+                            <div class="group relative aspect-video rounded-[2.5rem] overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoesWLQ0C9nSvNolj3w1_oaZASkUH7dWc2WB1JAnD95tOcwoTgGuN8FAAWbCmaHfojvAziAXcAYh13wiJ38RLNPI1NQtkdnKbkZsbWSCtJ2C4rf8-VDABj3JA1Uk_1YECkn8nFW05L6uoLoc0sHDetXhfZmXRToPEXlpwgij8JTC290P62r2Iyj9SWhq0STu20hWwexPIGV-3CFafPpjxyYUPA4-pdjORPP4C9VH478FyqvICzyvGLRCPY_i-ezmL85bHbLIc1v2Cv"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-10 flex flex-col justify-end">
+                                    <p class="text-white font-black text-2xl">Safari Connection</p>
+                                    <p class="text-primary font-bold uppercase tracking-widest text-xs">Included access
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -258,7 +244,6 @@
                             </div>
                             <span class="text-sm font-bold text-gray-400">/ night</span>
                         </div>
-
                         <div class="flex flex-col gap-4">
                             <div class="grid grid-cols-2 gap-4">
                                 <div
@@ -275,34 +260,15 @@
                                 </div>
                             </div>
                         </div>
-
                         <button
-                            class="h-16 w-full rounded-2xl bg-primary text-[#132210] font-black text-lg shadow-xl shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 transition-all">
+                            class="h-16 w-full rounded-2xl bg-primary text-[#14532d] font-black text-lg shadow-xl shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 transition-all">
                             Reserve Now
                         </button>
-
-                        <p class="text-center text-xs font-bold text-gray-400 uppercase tracking-widest">No credit card
-                            required today</p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
-    <!-- Scripts -->
-    <script>
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const closeMenuBtn = document.getElementById('close-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('translate-x-full');
-        });
-
-        closeMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.add('translate-x-full');
-        });
-    </script>
 </body>
 
 </html>
