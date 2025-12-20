@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Safari Packages | Beach & Wild</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#33f20d",
+                        "background-light": "#f6f8f5",
+                        "background-dark": "#132210",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+
+        .nav-link {
+            font-size: 0.875rem;
+            font-weight: 700;
+            transition: color 0.2s;
+            position: relative;
+            padding-bottom: 0.25rem;
+        }
+
+        .nav-link.active {
+            color: #33f20d;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #33f20d;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#121811] dark:text-gray-100 antialiased">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 bg-white/95 dark:bg-[#132210]/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2 group transition-transform hover:scale-[1.02]">
+                    <div
+                        class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+                        <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                    </div>
+                    <span
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase group-hover:text-primary transition-colors">Beach
+                        & Wild</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-10">
+                    <a href="index.html" class="nav-link text-[#121811] dark:text-white hover:text-primary">Home</a>
+                    <a href="explore.html" class="nav-link text-[#121811] dark:text-white hover:text-primary">Villas</a>
+                    <a href="safaris.html" class="nav-link active">Safaris</a>
+                    <a href="about.html" class="nav-link text-[#121811] dark:text-white hover:text-primary">About</a>
+                    <a href="contact.html"
+                        class="nav-link text-[#121811] dark:text-white hover:text-primary">Contact</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-3">
+                    <button id="mobile-menu-btn"
+                        class="md:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-gray-50 dark:bg-white/5 text-[#121811] dark:text-white hover:bg-primary transition-all">
+                        <span class="material-symbols-outlined text-2xl">menu</span>
+                    </button>
+                    <a href="contact.html"
+                        class="hidden lg:flex h-11 px-6 items-center justify-center rounded-full bg-primary text-[#132210] text-sm font-bold shadow-lg shadow-primary/20 hover:bg-[#2bd90b] transition-all">
+                        Book Now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 z-[60] bg-white dark:bg-[#132210] p-6 flex flex-col gap-8 md:hidden transition-all duration-500 translate-x-full">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                    </div>
+                    <span
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase transition-colors">Beach
+                        & Wild</span>
+                </a>
+                <button id="close-menu-btn"
+                    class="w-11 h-11 rounded-full flex items-center justify-center text-[#121811] dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4">
+                <a href="index.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Home</a>
+                <a href="explore.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Villas</a>
+                <a href="safaris.html" class="text-4xl font-black text-primary py-2">Safaris</a>
+                <a href="about.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">About</a>
+                <a href="contact.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-24">
+                <h1 class="text-7xl font-black tracking-tight mb-8">Into the <span
+                        class="text-primary italic">Wild</span></h1>
+                <p class="text-xl text-gray-500 font-medium leading-relaxed">Experience the majesty of the African
+                    savanna with our curated safari packages. From day trips to week-long expeditions, we bring the wild
+                    to you.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Package Card 1 -->
+                <article
+                    class="group relative flex flex-col lg:flex-row overflow-hidden rounded-[3rem] bg-white dark:bg-[#1a2e16] shadow-xl border border-gray-100 dark:border-gray-800 hover:shadow-2xl transition-all duration-500">
+                    <div class="relative w-full lg:w-2/5 aspect-[4/3] lg:aspect-auto overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuHeMcmgSE9JbXEFWxj5FVxOdsbQcgKH8JADnspxYJZq41ixQWDQNZFGuj72DVPZsRGbXyVkM0uDd3Qp6Qt84N_yjhmhwets-Y1Rhl3Fu2cd-yWYDFR5dAMTEICxKPDystnvmQkDUQ93fBTaxJsvsyLarmp-RUmNZNYZdMf8ioC5PGWBB30xcSzi8jM3IIlFnXwGjZZ-mrH3BXOjJTzyGAx0YLMZM89GdVAVme4WcBKdu9-O6vRcrTHnj5rP1UWhYqe_G3WOk-KqYgE"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            alt="Serengeti">
+                        <div
+                            class="absolute top-6 left-6 bg-primary text-[#132210] px-4 py-1.5 rounded-xl text-[10px] font-black uppercase tracking-widest shadow-xl">
+                            Best Seller</div>
+                    </div>
+                    <div class="p-10 flex flex-col justify-between flex-1">
+                        <div class="flex flex-col gap-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-3xl font-black tracking-tight mb-2">Serengeti Migration</h3>
+                                    <p class="text-sm font-bold text-primary uppercase tracking-widest">Tanzania
+                                        expedition</p>
+                                </div>
+                                <span class="text-3xl font-black tracking-tighter text-primary">$1,200</span>
+                            </div>
+                            <p class="text-gray-500 font-medium leading-relaxed">A 5-day journey through the heart of
+                                the Serengeti during the great wildebeest migration.</p>
+                        </div>
+                        <div class="mt-8 flex flex-col gap-4">
+                            <div
+                                class="flex gap-6 py-6 border-y border-gray-50 dark:border-gray-800 text-xs font-black uppercase tracking-widest text-gray-400">
+                                <span class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-primary">schedule</span> 5 Days</span>
+                                <span class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-primary">groups</span> Small Groups</span>
+                            </div>
+                            <a href="itinerary.html"
+                                class="h-14 w-full rounded-2xl bg-[#132210] text-[#33f20d] border border-primary/20 flex items-center justify-center gap-2 font-black uppercase tracking-widest hover:bg-primary hover:text-[#132210] transition-all">
+                                View Itinerary
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Package Card 2 -->
+                <article
+                    class="group relative flex flex-col lg:flex-row overflow-hidden rounded-[3rem] bg-white dark:bg-[#1a2e16] shadow-xl border border-gray-100 dark:border-gray-800 hover:shadow-2xl transition-all duration-500">
+                    <div class="relative w-full lg:w-2/5 aspect-[4/3] lg:aspect-auto overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRuOgHWJStH-vBL47Cwcml9kPhLUAKj_A9TMgdktpb_Djqj6xOQwJNcvAIaeAQkpWxolcGreV68UNV4IeWbQqM4g_pEem17q1ovariE5MNQZH28If-ZWwfphufFpkQmCN2D-toY5CrpT-crHsDDtSm9VvDD1_b8OYj8bQl_fo3ZD2Vo2URNyCs85KKhtCx_47G45k8y7NOJqpRN_vG7vXUDy2SvzrzWule2bA-GLY5P9ZfBahnLIfxM4KBnte8xHeERX46ldWakoQR"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            alt="Tsavo">
+                    </div>
+                    <div class="p-10 flex flex-col justify-between flex-1">
+                        <div class="flex flex-col gap-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-3xl font-black tracking-tight mb-2">Tsavo Red Dust</h3>
+                                    <p class="text-sm font-bold text-primary uppercase tracking-widest">Kenya coast
+                                        safari</p>
+                                </div>
+                                <span class="text-3xl font-black tracking-tighter text-primary">$800</span>
+                            </div>
+                            <p class="text-gray-500 font-medium leading-relaxed">A perfect 3-day extension from your
+                                beach villa to the red elephants of Tsavo East.</p>
+                        </div>
+                        <div class="mt-8">
+                            <a href="itinerary.html"
+                                class="h-14 w-full rounded-2xl bg-[#132210] text-[#33f20d] border border-primary/20 flex items-center justify-center gap-2 font-black uppercase tracking-widest hover:bg-primary hover:text-[#132210] transition-all">
+                                View Itinerary
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Integration -->
+    <footer class="bg-white dark:bg-[#1a2c15] py-24 border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                    </div>
+                    <span class="text-xl font-black tracking-tighter uppercase">Beach & Wild</span>
+                </a>
+                <p class="text-gray-500 text-sm font-bold uppercase tracking-widest">© 2024 Beach & Wild. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+    </script>
+</body>
+
+</html>

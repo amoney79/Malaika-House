@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Explore Villas | Beach & Wild</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#33f20d",
+                        "background-light": "#f6f8f5",
+                        "background-dark": "#132210",
+                        "text-main-light": "#121811",
+                        "text-sub-light": "#678a60",
+                        "text-main-dark": "#e0e6de",
+                        "text-sub-dark": "#8fa88a",
+                        "card-bg-light": "#ffffff",
+                        "card-bg-dark": "#1a2c15",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "md": "0.375rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+
+        .nav-link {
+            font-size: 0.875rem;
+            font-weight: 700;
+            transition: color 0.2s;
+            position: relative;
+            padding-bottom: 0.25rem;
+        }
+
+        .nav-link.active {
+            color: #33f20d;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #33f20d;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark font-display antialiased">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 bg-white/95 dark:bg-[#132210]/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2 group transition-transform hover:scale-[1.02]">
+                    <div
+                        class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+                        <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                    </div>
+                    <span
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase group-hover:text-primary transition-colors">Beach
+                        & Wild</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-10">
+                    <a href="index.html" class="nav-link text-[#121811] dark:text-white hover:text-primary">Home</a>
+                    <a href="explore.html" class="nav-link active">Villas</a>
+                    <a href="safaris.html"
+                        class="nav-link text-[#121811] dark:text-white hover:text-primary">Safaris</a>
+                    <a href="about.html" class="nav-link text-[#121811] dark:text-white hover:text-primary">About</a>
+                    <a href="contact.html"
+                        class="nav-link text-[#121811] dark:text-white hover:text-primary">Contact</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-3">
+                    <button
+                        class="hidden sm:flex items-center justify-center w-10 h-10 rounded-full text-[#121811] dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+                        <span class="material-symbols-outlined text-2xl">search</span>
+                    </button>
+                    <a href="contact.html"
+                        class="hidden lg:flex h-11 px-6 items-center justify-center rounded-full bg-primary text-[#132210] text-sm font-bold shadow-lg shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 active:scale-95 transition-all">
+                        Book Now
+                    </a>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn"
+                        class="md:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-gray-50 dark:bg-white/5 text-[#121811] dark:text-white hover:bg-primary hover:text-[#132210] transition-all">
+                        <span class="material-symbols-outlined text-2xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 z-[60] bg-white dark:bg-[#132210] p-6 flex flex-col gap-8 md:hidden transition-all duration-500 translate-x-full">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                    </div>
+                    <span
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase transition-colors">Beach
+                        & Wild</span>
+                </a>
+                <button id="close-menu-btn"
+                    class="w-11 h-11 rounded-full flex items-center justify-center text-[#121811] dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4">
+                <a href="index.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Home</a>
+                <a href="explore.html" class="text-4xl font-black text-primary py-2">Villas</a>
+                <a href="safaris.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Safaris</a>
+                <a href="about.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">About</a>
+                <a href="contact.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Contact</a>
+            </nav>
+            <div class="mt-auto">
+                <a href="contact.html"
+                    class="flex h-16 items-center justify-center rounded-2xl bg-primary text-[#132210] text-lg font-bold shadow-lg shadow-primary/20 hover:bg-[#2bd90b] transition-all">
+                    Book Your Stay
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header section -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+                <div class="flex flex-col gap-4">
+                    <h1 class="text-5xl font-black tracking-tight">Luxury <span class="text-primary italic">Beach
+                            Villas</span></h1>
+                    <p class="text-gray-500 font-medium max-w-xl">Curated collection of the most exclusive beachfront
+                        stays across the coast.</p>
+                </div>
+                <!-- Filter Chips -->
+                <div class="flex gap-3 overflow-x-auto no-scrollbar scroll-smooth snap-x pb-2">
+                    <button
+                        class="snap-start flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-2xl bg-[#132210] dark:bg-primary text-white dark:text-[#132210] px-8 font-bold transition-all shadow-lg active:scale-95">
+                        All Stays
+                    </button>
+                    <button
+                        class="snap-start flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-2xl bg-white dark:bg-card-bg-dark border border-gray-200 dark:border-gray-800 px-8 font-bold text-gray-500 transition-all hover:border-primary hover:text-primary active:scale-95">
+                        Beachfront
+                    </button>
+                    <button
+                        class="snap-start flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-2xl bg-white dark:bg-card-bg-dark border border-gray-200 dark:border-gray-800 px-8 font-bold text-gray-500 transition-all hover:border-primary hover:text-primary active:scale-95">
+                        Safari Edge
+                    </button>
+                </div>
+            </div>
+
+            <!-- Listings Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Card 1 -->
+                <a href="villa-detail.html"
+                    class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-800">
+                    <div class="relative w-full aspect-[4/3] overflow-hidden">
+                        <div
+                            class="absolute top-4 left-4 z-10 bg-white/90 dark:bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-2xl flex items-center gap-2 shadow-lg">
+                            <span class="material-symbols-outlined text-yellow-500 text-lg fill-current">star</span>
+                            <span class="text-xs font-black uppercase tracking-widest">Top Rated</span>
+                        </div>
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKJznv90rOkRq2tXBx9V2_fTAs6MIOAMCf1v7xZy2CMvooqGgON2gXOYcDI4A7qsUSZp21kAVM9IKsLU5yCvOZnNuXHxHDfxolWKNw-AR8J3qIh1uuUYFxoILr5q4lAdM1sRgJiVXKRGhJLc5cfEz8bsohVbJ2A9rYNCJYqEFLSfdpGAorxBqtV3p_ZePpgJBfTYcy5neDorq2kqVy3wz8J3HpkQDEK08i7ELWjb7Ff2TXBQa2Lr36Nij4J3HVCgRuQcVdUfV_9QBb"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            alt="Villa">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3
+                                    class="text-2xl font-black tracking-tight mb-2 group-hover:text-primary transition-colors">
+                                    The Azure Palm</h3>
+                                <div
+                                    class="flex items-center gap-1 text-gray-500 font-bold text-sm uppercase tracking-widest">
+                                    <span class="material-symbols-outlined text-lg">location_on</span>
+                                    Watamu, Kenya
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <span class="text-3xl font-black text-primary tracking-tighter">$450</span>
+                                <span class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">/
+                                    Night</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 py-6 border-y border-gray-50 dark:border-gray-800">
+                            <div
+                                class="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-gray-500">
+                                <span class="material-symbols-outlined text-primary text-xl">bed</span> 3 Beds
+                            </div>
+                            <div
+                                class="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-gray-500">
+                                <span class="material-symbols-outlined text-primary text-xl">waves</span> Ocean
+                            </div>
+                            <div
+                                class="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-gray-500">
+                                <span class="material-symbols-outlined text-primary text-xl">restaurant</span> Chef
+                            </div>
+                        </div>
+                        <div
+                            class="mt-8 flex h-14 w-full items-center justify-center rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-gray-800 text-sm font-black uppercase tracking-widest group-hover:bg-primary group-hover:text-[#132210] group-hover:border-primary transition-all">
+                            View Details
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="villa-detail.html"
+                    class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 dark:border-gray-800">
+                    <div class="relative w-full aspect-[4/3] overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFZSgPT9FhuaNc84zlCdpvwjdewCIMWl_OgRfVJRHwWx6Uz_KZFBNt6dpiA4Ts9catnHWmyID4oxdzbBT5s_KFX1DXG5KGHtIz99uO-GvBrV7rF7afIQpFjzGwNjytHg-PQ0TqkPj3hMo_ANW9E2DHs0WNqGLuqEAyM9wU7Xy2Ey5S_JVIGIE6SyPXr1_SgH2l13_7oJIwBLSUQhIxQy9TmzPlDNL9Zl1agIyaXP3GOuCi3rslzshwh-vygl3SuQbYIotmZDUcrFdG"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            alt="Villa">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3
+                                    class="text-2xl font-black tracking-tight mb-2 group-hover:text-primary transition-colors">
+                                    The Glass House</h3>
+                                <div
+                                    class="flex items-center gap-1 text-gray-500 font-bold text-sm uppercase tracking-widest">
+                                    <span class="material-symbols-outlined text-lg">location_on</span>
+                                    Diani, Kenya
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-end">
+                                <span class="text-3xl font-black text-primary tracking-tighter">$550</span>
+                                <span class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">/
+                                    Night</span>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-8 flex h-14 w-full items-center justify-center rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-gray-800 text-sm font-black uppercase tracking-widest group-hover:bg-primary group-hover:text-[#132210] group-hover:border-primary transition-all">
+                            View Details
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#1a2c15] pt-24 pb-12 border-t border-gray-100 dark:border-gray-800 mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+                <div class="flex flex-col gap-6">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                        </div>
+                        <span class="text-xl font-black tracking-tighter uppercase">Beach & Wild</span>
+                    </a>
+                    <p class="text-gray-500 font-medium leading-relaxed">Luxury travel curators for those who seek the
+                        perfect balance of serenity and discovery.</p>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h5 class="text-lg font-black uppercase tracking-widest text-[#121811] dark:text-white">Quick Links
+                    </h5>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="index.html"
+                                class="text-gray-500 hover:text-primary transition-colors font-bold">Home</a></li>
+                        <li><a href="explore.html"
+                                class="text-gray-500 hover:text-primary transition-colors font-bold">Villas</a></li>
+                        <li><a href="safaris.html"
+                                class="text-gray-500 hover:text-primary transition-colors font-bold">Safaris</a></li>
+                        <li><a href="about.html"
+                                class="text-gray-500 hover:text-primary transition-colors font-bold">About Us</a></li>
+                    </ul>
+                </div>
+                <!-- ... other columns ... -->
+            </div>
+            <div
+                class="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-gray-100 dark:border-gray-800">
+                <p class="text-gray-500 text-sm font-bold uppercase tracking-widest">© 2024 Beach & Wild. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+    </script>
+</body>
+
+</html>

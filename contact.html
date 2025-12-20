@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us | Beach & Wild</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#33f20d",
+                        "background-light": "#f6f8f5",
+                        "background-dark": "#132210",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2c16",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: 100vh;
+        }
+
+        .nav-link {
+            font-size: 0.875rem;
+            font-weight: 700;
+            transition: color 0.2s;
+            position: relative;
+            padding-bottom: 0.25rem;
+        }
+
+        .nav-link.active {
+            color: #33f20d;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #33f20d;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-[#121811] dark:text-gray-100">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 bg-white/95 dark:bg-[#132210]/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2 group transition-transform hover:scale-[1.02]">
+                    <div
+                        class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+                        <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                    </div>
+                    <span
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase group-hover:text-primary transition-colors">Beach
+                        & Wild</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-10">
+                    <a href="index.html" class="nav-link text-[#121811] dark:text-white hover:text-primary">Home</a>
+                    <a href="explore.html" class="nav-link text-[#121811] dark:text-white hover:text-primary">Villas</a>
+                    <a href="safaris.html"
+                        class="nav-link text-[#121811] dark:text-white hover:text-primary">Safaris</a>
+                    <a href="about.html" class="nav-link text-[#121811] dark:text-white hover:text-primary">About</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-3">
+                    <button id="mobile-menu-btn"
+                        class="md:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-gray-50 dark:bg-white/5 text-[#121811] dark:text-white transition-all">
+                        <span class="material-symbols-outlined text-2xl">menu</span>
+                    </button>
+                    <a href="contact.html"
+                        class="hidden lg:flex h-11 px-6 items-center justify-center rounded-full bg-primary text-[#132210] text-sm font-bold shadow-lg shadow-primary/20 hover:bg-[#2bd90b] transition-all">
+                        Book Now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 z-[60] bg-white dark:bg-[#132210] p-6 flex flex-col gap-8 md:hidden transition-all duration-500 translate-x-full">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                    </div>
+                    <span
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase transition-colors">Beach
+                        & Wild</span>
+                </a>
+                <button id="close-menu-btn"
+                    class="w-11 h-11 rounded-full flex items-center justify-center text-[#121811] dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4">
+                <a href="index.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Home</a>
+                <a href="explore.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Villas</a>
+                <a href="safaris.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Safaris</a>
+                <a href="about.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">About</a>
+                <a href="contact.html" class="text-4xl font-black text-primary py-2">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+                <!-- Headline & Info -->
+                <div class="flex flex-col gap-12">
+                    <div class="flex flex-col gap-6">
+                        <span class="text-primary font-black uppercase tracking-[0.3em] text-[10px]">Get in touch</span>
+                        <h1 class="text-7xl font-black tracking-tighter">Let's Plan Your <br /> <span
+                                class="text-primary italic">Adventure</span></h1>
+                        <p class="text-xl text-gray-500 font-medium leading-relaxed max-w-lg">Whether it's a beach
+                            escape or a safari expedition, our experts are here to help you curate the perfect stay.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="p-8 rounded-[2rem] bg-white dark:bg-surface-dark shadow-xl flex flex-col gap-6">
+                            <div
+                                class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center text-[#132210]">
+                                <span class="material-symbols-outlined text-3xl">call</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-400 uppercase tracking-widest text-xs mb-1">Call Us</h4>
+                                <p class="text-xl font-black">+254 (0) 700 000 000</p>
+                            </div>
+                        </div>
+                        <div class="p-8 rounded-[2rem] bg-white dark:bg-surface-dark shadow-xl flex flex-col gap-6">
+                            <div
+                                class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center text-[#132210]">
+                                <span class="material-symbols-outlined text-3xl">mail</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-400 uppercase tracking-widest text-xs mb-1">Email Us</h4>
+                                <p class="text-xl font-black break-all">hello@beachandwild.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="p-12 rounded-[3.5rem] bg-[#132210] border-4 border-primary/20 shadow-2xl">
+                    <form class="flex flex-col gap-8">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-[10px] font-black uppercase tracking-[0.25em] text-primary/60 ml-1">Your
+                                Full Name</label>
+                            <input type="text" placeholder="John Doe"
+                                class="h-16 rounded-2xl bg-white/5 border border-white/10 px-6 text-white font-bold focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-[10px] font-black uppercase tracking-[0.25em] text-primary/60 ml-1">Email
+                                Address</label>
+                            <input type="email" placeholder="john@example.com"
+                                class="h-16 rounded-2xl bg-white/5 border border-white/10 px-6 text-white font-bold focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label
+                                class="text-[10px] font-black uppercase tracking-[0.25em] text-primary/60 ml-1">Special
+                                Requirements</label>
+                            <textarea rows="4" placeholder="Tell us about your dream stay..."
+                                class="rounded-2xl bg-white/5 border border-white/10 p-6 text-white font-bold focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="h-16 w-full rounded-2xl bg-primary text-[#132210] font-black text-lg shadow-xl shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 transition-all">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white dark:bg-[#1a2c15] py-24 border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                </div>
+                <span class="text-xl font-black tracking-tighter uppercase transition-colors">Beach & Wild</span>
+            </a>
+            <p class="text-gray-500 text-sm font-bold uppercase tracking-widest">© 2024 Beach & Wild. All rights
+                reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+    </script>
+</body>
+
+</html>

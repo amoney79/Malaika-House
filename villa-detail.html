@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Villa Details | Beach & Wild</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#33f20d",
+                        "background-light": "#f6f8f5",
+                        "background-dark": "#132210",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+
+        .nav-link {
+            font-size: 0.875rem;
+            font-weight: 700;
+            transition: color 0.2s;
+            position: relative;
+            padding-bottom: 0.25rem;
+        }
+
+        .nav-link.active {
+            color: #33f20d;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #33f20d;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#121811] dark:text-white">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 bg-white/95 dark:bg-[#132210]/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2 group transition-transform hover:scale-[1.02]">
+                    <div
+                        class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+                        <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                    </div>
+                    <span
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase group-hover:text-primary transition-colors">Beach
+                        & Wild</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-10">
+                    <a href="index.html" class="nav-link text-[#121811] dark:text-white hover:text-primary">Home</a>
+                    <a href="explore.html" class="nav-link active">Villas</a>
+                    <a href="safaris.html"
+                        class="nav-link text-[#121811] dark:text-white hover:text-primary">Safaris</a>
+                    <a href="about.html" class="nav-link text-[#121811] dark:text-white hover:text-primary">About</a>
+                    <a href="contact.html"
+                        class="nav-link text-[#121811] dark:text-white hover:text-primary">Contact</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-3">
+                    <button
+                        class="hidden sm:flex items-center justify-center w-10 h-10 rounded-full text-[#121811] dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+                        <span class="material-symbols-outlined text-2xl">search</span>
+                    </button>
+                    <a href="contact.html"
+                        class="hidden lg:flex h-11 px-6 items-center justify-center rounded-full bg-primary text-[#132210] text-sm font-bold shadow-lg shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 active:scale-95 transition-all">
+                        Book Now
+                    </a>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn"
+                        class="md:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-gray-50 dark:bg-white/5 text-[#121811] dark:text-white hover:bg-primary hover:text-[#132210] transition-all">
+                        <span class="material-symbols-outlined text-2xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 z-[60] bg-white dark:bg-[#132210] p-6 flex flex-col gap-8 md:hidden transition-all duration-500 translate-x-full">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[#132210] text-2xl font-bold">beach_access</span>
+                    </div>
+                    <span
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase transition-colors">Beach
+                        & Wild</span>
+                </a>
+                <button id="close-menu-btn"
+                    class="w-11 h-11 rounded-full flex items-center justify-center text-[#121811] dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4">
+                <a href="index.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Home</a>
+                <a href="explore.html" class="text-4xl font-black text-primary py-2">Villas</a>
+                <a href="safaris.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Safaris</a>
+                <a href="about.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">About</a>
+                <a href="contact.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumbs -->
+            <nav class="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-gray-400 mb-8">
+                <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                <span class="material-symbols-outlined text-sm">chevron_right</span>
+                <a href="explore.html" class="hover:text-primary transition-colors">Villas</a>
+                <span class="material-symbols-outlined text-sm">chevron_right</span>
+                <span class="text-gray-500">Sunset Beach Villa</span>
+            </nav>
+
+            <!-- Image Grid -->
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[600px] mb-12 rounded-[2.5rem] overflow-hidden">
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9O9WlFIZHAYhWbaEtDoJfldMt6PtvfaFaiASBt407-CEy4reMgfo-d8KgH9u58FK5DmyxUiP4pJ8FsJ9FiSRbHpPoEqT59mnL9XvEZv3qfVbFVTz1vG7I7C1GDEXC90ORCdTzB2_uy8Mcd14LU6sxNV6X0zAvNKPgrRHhTzV5jXDWQHLbyaMnmrqeIUTfH8aOYJSDC9UG25zyaPEWU5Js1RQWu6p_WHj5Uz_VBZM1qAk3DIYl1cLalhJf18Vc7UBLGO823YqQf-lS"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        alt="Main Photo">
+                    <a href="gallery.html"
+                        class="absolute bottom-6 right-6 bg-white/90 dark:bg-black/70 backdrop-blur-md px-6 py-3 rounded-2xl flex items-center gap-2 text-sm font-black uppercase tracking-widest shadow-xl opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
+                        <span class="material-symbols-outlined">photo_library</span>
+                        View Gallery
+                    </a>
+                </div>
+                <div class="hidden md:block col-span-1 row-span-1 overflow-hidden">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh0CK6YbQcoeJN3is1PzuRdgZqpAdYZDL7-rz-kPpDeCW71I8LPK7NsGCWq-3xwn7juQ2zQAL9KBDsxXvH3M2fJO3A247CNte4ZhvnKPtnQmY9qWiesNTRKC_VP8pJOGqiO9yX8hXLA8jOXIwB4fBmlJlII3cPWNiZRD7sFG_ONx514_OvRxIBdGAzhqvSVQqg-hXkiUCpBoygPmoX8XoVV0LH2kN221u4P5VJdjlMFMIUpomr82T5l79OQEnD6kH-9dg8tvt1gcUz"
+                        class="w-full h-full object-cover" alt="Detail 1">
+                </div>
+                <div class="hidden md:block col-span-1 row-span-1 overflow-hidden">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuClkfqJftTHF22Z2QUHlRqIwV81xtL5x0aNEuoskwBkDb5A4vVg7EPOaoTa4HKVd0KmabRnkvTwP-vONnSO5SBrk5XsaeDRFIGnGm2py1kHEL6kYcca__YM0WVJb0R7bebWZ3Zj2h8SUM1vSAX64er6nG6-_B68vLtN6f0VZ3lux_Tnh3KnIdExTRCRfRtrw8i2AJWkYoOoQVRBF8Bws8xqW8QGXviAjN-Dzo89cKI5OvkYzbrczEFqB5ZMfpWLlZiOQHpj7cVTfCpn"
+                        class="w-full h-full object-cover" alt="Detail 2">
+                </div>
+                <div class="hidden md:block col-span-2 row-span-1 overflow-hidden">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoesWLQ0C9nSvNolj3w1_oaZASkUH7dWc2WB1JAnD95tOcwoTgGuN8FAAWbCmaHfojvAziAXcAYh13wiJ38RLNPI1NQtkdnKbkZsbWSCtJ2C4rf8-VDABj3JA1Uk_1YECkn8nFW05L6uoLoc0sHDetXhfZmXRToPEXlpwgij8JTC290P62r2Iyj9SWhq0STu20hWwexPIGV-3CFafPpjxyYUPA4-pdjORPP4C9VH478FyqvICzyvGLRCPY_i-ezmL85bHbLIc1v2Cv"
+                        class="w-full h-full object-cover" alt="Detail 3">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                <!-- Content -->
+                <div class="lg:col-span-2 flex flex-col gap-12">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-2">
+                            <div
+                                class="px-3 py-1 bg-primary/10 text-primary rounded-lg text-[10px] font-black uppercase tracking-widest border border-primary/20">
+                                Exclusive Luxury</div>
+                            <span class="text-xs font-bold text-gray-400">• Hosted by Amina</span>
+                        </div>
+                        <h1 class="text-6xl font-black tracking-tight">Sunset Beach <span
+                                class="text-primary italic">Villa</span></h1>
+                        <p class="flex items-center gap-2 text-gray-500 font-bold uppercase tracking-widest text-sm">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            Palm Coast, Kenya • 2.5km to Tsavo Park
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col gap-6">
+                        <h2 class="text-3xl font-black tracking-tight">About this <span
+                                class="text-primary italic">Paradise</span></h2>
+                        <p class="text-lg text-gray-500 font-medium leading-[1.8] max-w-2xl">
+                            Experience luxury steps away from the ocean. This villa features a private pool, direct
+                            beach access, and is located just minutes from the famous Tsavo East National Park safari
+                            gate. Designed with locally sourced materials and modern aesthetics.
+                        </p>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-gray-100 dark:border-gray-800">
+                        <div class="flex flex-col gap-6">
+                            <h3 class="text-xl font-black uppercase tracking-widest">Amenities</h3>
+                            <div class="grid grid-cols-1 gap-4">
+                                <div class="flex items-center gap-4 text-gray-500 font-bold">
+                                    <span class="material-symbols-outlined text-primary text-2xl">pool</span>
+                                    Private Infinity Pool
+                                </div>
+                                <div class="flex items-center gap-4 text-gray-500 font-bold">
+                                    <span class="material-symbols-outlined text-primary text-2xl">wifi</span>
+                                    Ultra-fast Starlink Wifi
+                                </div>
+                                <div class="flex items-center gap-4 text-gray-500 font-bold">
+                                    <span class="material-symbols-outlined text-primary text-2xl">restaurant</span>
+                                    Private Chef Available
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-6">
+                            <h3 class="text-xl font-black uppercase tracking-widest">Experiences</h3>
+                            <a href="itinerary.html"
+                                class="p-6 rounded-3xl bg-[#132210] flex items-center justify-between group hover:border-primary border-4 border-transparent transition-all">
+                                <div>
+                                    <p class="text-primary text-[10px] font-black uppercase tracking-[0.2em] mb-1">
+                                        Exclusive Bundle</p>
+                                    <p class="text-white font-bold text-lg">Safari Adventure</p>
+                                </div>
+                                <span
+                                    class="material-symbols-outlined text-primary text-3xl transition-transform group-hover:translate-x-2">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Sidebar -->
+                <div class="lg:col-span-1">
+                    <div
+                        class="sticky top-32 p-10 rounded-[2.5rem] bg-white dark:bg-surface-dark shadow-2xl border border-gray-100 dark:border-gray-800 flex flex-col gap-8">
+                        <div class="flex justify-between items-end">
+                            <div class="flex flex-col">
+                                <span class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Total
+                                    Stay</span>
+                                <span class="text-4xl font-black text-primary tracking-tighter">$300</span>
+                            </div>
+                            <span class="text-sm font-bold text-gray-400">/ night</span>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div
+                                    class="p-4 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-gray-800 flex flex-col gap-1">
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-gray-400">Check
+                                        In</span>
+                                    <span class="font-bold">Oct 14, 2024</span>
+                                </div>
+                                <div
+                                    class="p-4 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-gray-800 flex flex-col gap-1">
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-gray-400">Check
+                                        Out</span>
+                                    <span class="font-bold">Oct 19, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            class="h-16 w-full rounded-2xl bg-primary text-[#132210] font-black text-lg shadow-xl shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 transition-all">
+                            Reserve Now
+                        </button>
+
+                        <p class="text-center text-xs font-bold text-gray-400 uppercase tracking-widest">No credit card
+                            required today</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+    </script>
+</body>
+
+</html>
