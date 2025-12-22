@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Villa Details | Beach & Wild</title>
+    <title>Villa Details | Nyumba Malaika & Safaris</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -16,7 +16,8 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- JS (Tailwind Config + Main Logic) -->
+    <!-- JS (Data + Main Logic) -->
+    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -35,8 +36,8 @@
                         <span class="material-symbols-outlined text-[#14532d] text-2xl font-bold">beach_access</span>
                     </div>
                     <span
-                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase group-hover:text-primary transition-colors">Malaika
-                        House
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase group-hover:text-primary transition-colors">Nyumba
+                        Malaika
                         & safaris</span>
                 </a>
 
@@ -79,8 +80,9 @@
                         <span class="material-symbols-outlined text-[#14532d] text-2xl font-bold">beach_access</span>
                     </div>
                     <span
-                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase transition-colors">Beach
-                        & Wild</span>
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase transition-colors">Nyumba
+                        Malaika
+                        & Safaris</span>
                 </a>
                 <button id="close-menu-btn"
                     class="w-11 h-11 rounded-full flex items-center justify-center text-[#121811] dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
@@ -109,33 +111,21 @@
                 <span class="material-symbols-outlined text-sm">chevron_right</span>
                 <a href="explore.html" class="hover:text-primary transition-colors">Villas</a>
                 <span class="material-symbols-outlined text-sm">chevron_right</span>
-                <span class="text-gray-500">Sunset Beach Villa</span>
+                <span class="text-gray-500" id="breadcrumb-name">Villa Name</span>
             </nav>
 
             <!-- Image Grid -->
-            <div
+            <div id="image-grid"
                 class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[600px] mb-12 rounded-[2.5rem] overflow-hidden">
                 <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9O9WlFIZHAYhWbaEtDoJfldMt6PtvfaFaiASBt407-CEy4reMgfo-d8KgH9u58FK5DmyxUiP4pJ8FsJ9FiSRbHpPoEqT59mnL9XvEZv3qfVbFVTz1vG7I7C1GDEXC90ORCdTzB2_uy8Mcd14LU6sxNV6X0zAvNKPgrRHhTzV5jXDWQHLbyaMnmrqeIUTfH8aOYJSDC9UG25zyaPEWU5Js1RQWu6p_WHj5Uz_VBZM1qAk3DIYl1cLalhJf18Vc7UBLGO823YqQf-lS"
+                    <img id="main-img" src=""
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         alt="Main Photo">
-                    <a href="gallery.html"
+                    <a href="#"
                         class="absolute bottom-6 right-6 bg-white/90 dark:bg-black/70 backdrop-blur-md px-6 py-3 rounded-2xl flex items-center gap-2 text-sm font-black uppercase tracking-widest shadow-xl opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
                         <span class="material-symbols-outlined">photo_library</span>
                         View Gallery
                     </a>
-                </div>
-                <div class="hidden md:block col-span-1 row-span-1 overflow-hidden">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh0CK6YbQcoeJN3is1PzuRdgZqpAdYZDL7-rz-kPpDeCW71I8LPK7NsGCWq-3xwn7juQ2zQAL9KBDsxXvH3M2fJO3A247CNte4ZhvnKPtnQmY9qWiesNTRKC_VP8pJOGqiO9yX8hXLA8jOXIwB4fBmlJlII3cPWNiZRD7sFG_ONx514_OvRxIBdGAzhqvSVQqg-hXkiUCpBoygPmoX8XoVV0LH2kN221u4P5VJdjlMFMIUpomr82T5l79OQEnD6kH-9dg8tvt1gcUz"
-                        class="w-full h-full object-cover" alt="Detail 1">
-                </div>
-                <div class="hidden md:block col-span-1 row-span-1 overflow-hidden">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuClkfqJftTHF22Z2QUHlRqIwV81xtL5x0aNEuoskwBkDb5A4vVg7EPOaoTa4HKVd0KmabRnkvTwP-vONnSO5SBrk5XsaeDRFIGnGm2py1kHEL6kYcca__YM0WVJb0R7bebWZ3Zj2h8SUM1vSAX64er6nG6-_B68vLtN6f0VZ3lux_Tnh3KnIdExTRCRfRtrw8i2AJWkYoOoQVRBF8Bws8xqW8QGXviAjN-Dzo89cKI5OvkYzbrczEFqB5ZMfpWLlZiOQHpj7cVTfCpn"
-                        class="w-full h-full object-cover" alt="Detail 2">
-                </div>
-                <div class="hidden md:block col-span-2 row-span-1 overflow-hidden">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoesWLQ0C9nSvNolj3w1_oaZASkUH7dWc2WB1JAnD95tOcwoTgGuN8FAAWbCmaHfojvAziAXcAYh13wiJ38RLNPI1NQtkdnKbkZsbWSCtJ2C4rf8-VDABj3JA1Uk_1YECkn8nFW05L6uoLoc0sHDetXhfZmXRToPEXlpwgij8JTC290P62r2Iyj9SWhq0STu20hWwexPIGV-3CFafPpjxyYUPA4-pdjORPP4C9VH478FyqvICzyvGLRCPY_i-ezmL85bHbLIc1v2Cv"
-                        class="w-full h-full object-cover" alt="Detail 3">
                 </div>
             </div>
 
@@ -147,23 +137,20 @@
                             <div
                                 class="px-3 py-1 bg-primary/10 text-primary rounded-lg text-[10px] font-black uppercase tracking-widest border border-primary/20">
                                 Exclusive Luxury</div>
-                            <span class="text-xs font-bold text-gray-400">• Hosted by Amina</span>
+                            <span class="text-xs font-bold text-gray-400" id="host-name">• Hosted by ...</span>
                         </div>
-                        <h1 class="text-6xl font-black tracking-tight">Sunset Beach <span
-                                class="text-primary italic">Villa</span></h1>
+                        <h1 class="text-6xl font-black tracking-tight" id="villa-title">Villa Name</h1>
                         <p class="flex items-center gap-2 text-gray-500 font-bold uppercase tracking-widest text-sm">
                             <span class="material-symbols-outlined text-primary">location_on</span>
-                            Palm Coast, Kenya • 2.5km to Tsavo Park
+                            <span id="villa-location">Location, Kenya</span>
                         </p>
                     </div>
 
                     <div class="flex flex-col gap-6">
                         <h2 class="text-3xl font-black tracking-tight">About this <span
                                 class="text-primary italic">Paradise</span></h2>
-                        <p class="text-lg text-gray-500 font-medium leading-[1.8] max-w-2xl">
-                            Experience luxury steps away from the ocean. This villa features a private pool, direct
-                            beach access, and is located just minutes from the famous Tsavo East National Park safari
-                            gate.
+                        <p class="text-lg text-gray-500 font-medium leading-[1.8] max-w-2xl" id="villa-description">
+                            Description goes here...
                         </p>
                     </div>
 
@@ -171,21 +158,13 @@
                         class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 border-t border-gray-100 dark:border-gray-800">
                         <div class="flex flex-col gap-6">
                             <h3 class="text-xl font-black uppercase tracking-widest">Amenities</h3>
-                            <ul class="flex flex-col gap-4">
-                                <li class="flex items-center gap-4 text-gray-500 font-bold"><span
-                                        class="material-symbols-outlined text-primary text-2xl">pool</span> Private
-                                    Infinity Pool</li>
-                                <li class="flex items-center gap-4 text-gray-500 font-bold"><span
-                                        class="material-symbols-outlined text-primary text-2xl">wifi</span> Starlink
-                                    Wifi</li>
-                                <li class="flex items-center gap-4 text-gray-500 font-bold"><span
-                                        class="material-symbols-outlined text-primary text-2xl">restaurant</span>
-                                    Private Chef</li>
+                            <ul class="flex flex-col gap-4" id="amenities-list">
+                                <!-- Dynamic amenities -->
                             </ul>
                         </div>
                         <div class="flex flex-col gap-6">
                             <h3 class="text-xl font-black uppercase tracking-widest">Experiences</h3>
-                            <a href="itinerary.html"
+                            <a href="safaris.html"
                                 class="p-6 rounded-3xl bg-[#14532d] flex items-center justify-between group hover:border-primary border-4 border-transparent transition-all">
                                 <div>
                                     <p class="text-primary text-[10px] font-black uppercase tracking-[0.2em] mb-1">
@@ -206,29 +185,8 @@
                             <p class="text-lg text-gray-500 font-medium">Showcasing the lifestyle involved in this
                                 premium package.</p>
                         </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div class="group relative aspect-video rounded-[2.5rem] overflow-hidden">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9O9WlFIZHAYhWbaEtDoJfldMt6PtvfaFaiASBt407-CEy4reMgfo-d8KgH9u58FK5DmyxUiP4pJ8FsJ9FiSRbHpPoEqT59mnL9XvEZv3qfVbFVTz1vG7I7C1GDEXC90ORCdTzB2_uy8Mcd14LU6sxNV6X0zAvNKPgrRHhTzV5jXDWQHLbyaMnmrqeIUTfH8aOYJSDC9UG25zyaPEWU5Js1RQWu6p_WHj5Uz_VBZM1qAk3DIYl1cLalhJf18Vc7UBLGO823YqQf-lS"
-                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                    alt="Beachfront">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-10 flex flex-col justify-end">
-                                    <p class="text-white font-black text-2xl">Beachfront Bliss</p>
-                                    <p class="text-primary font-bold uppercase tracking-widest text-xs">Included
-                                        activity</p>
-                                </div>
-                            </div>
-                            <div class="group relative aspect-video rounded-[2.5rem] overflow-hidden">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoesWLQ0C9nSvNolj3w1_oaZASkUH7dWc2WB1JAnD95tOcwoTgGuN8FAAWbCmaHfojvAziAXcAYh13wiJ38RLNPI1NQtkdnKbkZsbWSCtJ2C4rf8-VDABj3JA1Uk_1YECkn8nFW05L6uoLoc0sHDetXhfZmXRToPEXlpwgij8JTC290P62r2Iyj9SWhq0STu20hWwexPIGV-3CFafPpjxyYUPA4-pdjORPP4C9VH478FyqvICzyvGLRCPY_i-ezmL85bHbLIc1v2Cv"
-                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                                    alt="Safari">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-10 flex flex-col justify-end">
-                                    <p class="text-white font-black text-2xl">Safari Connection</p>
-                                    <p class="text-primary font-bold uppercase tracking-widest text-xs">Included access
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="package-gallery">
+                            <!-- Dynamic gallery cards -->
                         </div>
                     </div>
                 </div>
@@ -241,7 +199,8 @@
                             <div class="flex flex-col">
                                 <span class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Total
                                     Stay</span>
-                                <span class="text-4xl font-black text-primary tracking-tighter">$300</span>
+                                <span class="text-4xl font-black text-primary tracking-tighter"
+                                    id="villa-price">$0</span>
                             </div>
                             <span class="text-sm font-bold text-gray-400">/ night</span>
                         </div>
@@ -261,15 +220,76 @@
                                 </div>
                             </div>
                         </div>
-                        <button
-                            class="h-16 w-full rounded-2xl bg-primary text-[#14532d] font-black text-lg shadow-xl shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 transition-all">
+                        <a href="contact.html"
+                            class="h-16 w-full rounded-2xl bg-primary text-[#14532d] flex items-center justify-center font-black text-lg shadow-xl shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 transition-all">
                             Reserve Now
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const villaId = urlParams.get('id') || 'sunset-villa';
+            const villa = villaData[villaId];
+
+            if (villa) {
+                // Update text content
+                document.title = `${villa.name} | Nyumba Malaika & Safaris`;
+                document.getElementById('breadcrumb-name').textContent = villa.name;
+                document.getElementById('villa-title').textContent = villa.name;
+                document.getElementById('villa-location').textContent = villa.location;
+                document.getElementById('villa-description').textContent = villa.description;
+                document.getElementById('host-name').textContent = `• Hosted by ${villa.host}`;
+                document.getElementById('villa-price').textContent = `$${villa.price}`;
+
+                // Update images
+                document.getElementById('main-img').src = villa.mainImage;
+                const imageGrid = document.getElementById('image-grid');
+                const secondaryImages = villa.images || [];
+
+                // Keep the first large image div and clear others
+                while (imageGrid.children.length > 1) {
+                    imageGrid.removeChild(imageGrid.lastChild);
+                }
+
+                // Append secondary images
+                secondaryImages.forEach((img, index) => {
+                    const div = document.createElement('div');
+                    div.className = index === 2 ? 'hidden md:block col-span-2 row-span-1 overflow-hidden' : 'hidden md:block col-span-1 row-span-1 overflow-hidden';
+                    div.innerHTML = `<img src="${img}" class="w-full h-full object-cover" alt="Detail">`;
+                    imageGrid.appendChild(div);
+                });
+
+                // Update amenities
+                const amenitiesList = document.getElementById('amenities-list');
+                amenitiesList.innerHTML = (villa.amenities || []).map(amenity => `
+                    <li class="flex items-center gap-4 text-gray-500 font-bold">
+                        <span class="material-symbols-outlined text-primary text-2xl">check_circle</span>
+                        ${amenity}
+                    </li>
+                `).join('');
+
+                // Update gallery
+                const galleryGrid = document.getElementById('package-gallery');
+                galleryGrid.innerHTML = (villa.gallery || []).map(item => `
+                    <div class="group relative aspect-video rounded-[2.5rem] overflow-hidden">
+                        <img src="${item.img}"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            alt="${item.title}">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-10 flex flex-col justify-end">
+                            <p class="text-white font-black text-2xl">${item.title}</p>
+                            <p class="text-primary font-bold uppercase tracking-widest text-xs">${item.sub}</p>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        });
+    </script>
 </body>
 
 </html>
