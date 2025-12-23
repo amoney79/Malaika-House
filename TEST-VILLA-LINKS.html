@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Villa Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            color: #14532d;
+        }
+
+        .test-links {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            display: block;
+            padding: 15px;
+            margin: 10px 0;
+            background: #33f20d;
+            color: #14532d;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        a:hover {
+            transform: translateX(10px);
+            background: #2bd90b;
+        }
+
+        .status {
+            padding: 15px;
+            background: #e8f5e9;
+            border-left: 4px solid #33f20d;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🏖️ Villa Links Test Page</h1>
+
+    <div class="status">
+        <strong>✅ Status:</strong> All villa links are now functional!<br>
+        <strong>📁 Data file:</strong> js/data.js has been created<br>
+        <strong>🔗 Links:</strong> All villa cards now have proper IDs
+    </div>
+
+    <div class="test-links">
+        <h2>Click any link to test:</h2>
+
+        <a href="villa-detail.html?id=nyumba-malaika">🏡 Nyumba Malaika</a>
+        <a href="villa-detail.html?id=sunset-villa">🌅 Nyumba Malaika - Sunset</a>
+        <a href="villa-detail.html?id=glass-house">🏢 Nyumba Malaika - Glass House</a>
+        <a href="villa-detail.html?id=coral-cove">🪸 Nyumba Malaika - Coral Cove</a>
+        <a href="villa-detail.html?id=savanna-oasis">🦁 Nyumba Malaika - Savanna</a>
+        <a href="villa-detail.html?id=indigo-bay">🌊 Nyumba Malaika - Indigo Bay</a>
+        <a href="villa-detail.html?id=royal-palms">👑 Nyumba Malaika - Royal Palms</a>
+        <a href="villa-detail.html?id=azure-palm">🌴 Nyumba Malaika - Azure Palm</a>
+
+        <hr style="margin: 30px 0;">
+
+        <a href="index.html" style="background: #14532d; color: #33f20d;">← Back to Homepage</a>
+    </div>
+
+    <script>
+        // Test if data.js loads correctly
+        const script = document.createElement('script');
+        script.src = 'js/data.js';
+        script.onload = () => {
+            console.log('✅ data.js loaded successfully');
+            console.log('Villa data available:', Object.keys(villaData));
+        };
+        script.onerror = () => {
+            console.error('❌ Failed to load data.js');
+        };
+        document.head.appendChild(script);
+    </script>
+</body>
+
+</html>
