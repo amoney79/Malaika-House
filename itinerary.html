@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Safari Itinerary | Nyumba Malaika & Safaris</title>
+    <title>Safari Itinerary | Beach & Wild</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -17,8 +17,7 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- JS (Data + Main Logic) -->
-    <script src="js/data.js"></script>
+    <!-- JS (Tailwind Config + Main Logic) -->
     <script src="js/main.js"></script>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -37,9 +36,8 @@
                         <span class="material-symbols-outlined text-[#14532d] text-2xl font-bold">beach_access</span>
                     </div>
                     <span
-                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase group-hover:text-primary transition-colors">Nyumba
-                        Malaika
-                        & Safaris</span>
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase group-hover:text-primary transition-colors">Beach
+                        & Wild</span>
                 </a>
 
                 <!-- Desktop Nav -->
@@ -75,9 +73,8 @@
                         <span class="material-symbols-outlined text-[#14532d] text-2xl font-bold">beach_access</span>
                     </div>
                     <span
-                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase transition-colors">Nyumba
-                        Malaika
-                        & Safaris</span>
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase transition-colors">Beach
+                        & Wild</span>
                 </a>
                 <button id="close-menu-btn"
                     class="w-11 h-11 rounded-full flex items-center justify-center text-[#121811] dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
@@ -104,20 +101,19 @@
             <nav class="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-gray-400 mb-8">
                 <a href="safaris.html" class="hover:text-primary transition-colors">Safaris</a>
                 <span class="material-symbols-outlined text-sm">chevron_right</span>
-                <span class="text-gray-500" id="breadcrumb-title">Itinerary Name</span>
+                <span class="text-gray-500">Serengeti & Sands</span>
             </nav>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
                 <div class="lg:col-span-2 flex flex-col gap-16">
                     <!-- Hero Image -->
                     <div class="relative w-full h-[500px] rounded-[3rem] overflow-hidden group shadow-2xl">
-                        <img id="hero-img" src=""
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRuOgHWJStH-vBL47Cwcml9kPhLUAKj_A9TMgdktpb_Djqj6xOQwJNcvAIaeAQkpWxolcGreV68UNV4IeWbQqM4g_pEem17q1ovariE5MNQZH28If-ZWwfphufFpkQmCN2D-toY5CrpT-crHsDDtSm9VvDD1_b8OYj8bQl_fo3ZD2Vo2URNyCs85KKhtCx_47G45k8y7NOJqpRN_vG7vXUDy2SvzrzWule2bA-GLY5P9ZfBahnLIfxM4KBnte8xHeERX46ldWakoQR"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                             alt="Safari">
                         <div class="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-black/80 to-transparent">
-                            <h1 class="text-white text-5xl font-black tracking-tight" id="hero-title">Itinerary Name
-                                <span class="text-primary italic">Duration</span>
-                            </h1>
+                            <h1 class="text-white text-5xl font-black tracking-tight">Serengeti & Sands <span
+                                    class="text-primary italic">7-Day Journey</span></h1>
                         </div>
                     </div>
 
@@ -125,9 +121,33 @@
                     <div class="flex flex-col gap-12">
                         <h2 class="text-4xl font-black tracking-tight">Trip <span
                                 class="text-primary italic">Timeline</span></h2>
-                        <div class="relative pl-12 flex flex-col gap-12 border-l-4 border-primary/20"
-                            id="trip-timeline">
-                            <!-- Dynamic timeline items -->
+                        <div class="relative pl-12 flex flex-col gap-12 border-l-4 border-primary/20">
+                            <!-- Day 1 -->
+                            <div class="relative">
+                                <div
+                                    class="absolute -left-[3.25rem] top-0 w-10 h-10 rounded-2xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                                    <span class="text-[#14532d] font-black">01</span>
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <h3 class="text-2xl font-black tracking-tight">Arrival & Coastal Check-in</h3>
+                                    <p class="text-lg text-gray-500 font-medium leading-relaxed max-w-xl">Scenic
+                                        transfer to your private beach villa. Welcome dinner under the stars with a
+                                        curated seafood menu.</p>
+                                </div>
+                            </div>
+                            <!-- Day 2 -->
+                            <div class="relative">
+                                <div
+                                    class="absolute -left-[3.25rem] top-0 w-10 h-10 rounded-2xl bg-white dark:bg-white/10 flex items-center justify-center border-4 border-primary/20 shadow-lg">
+                                    <span class="font-black">02</span>
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <h3 class="text-2xl font-black tracking-tight">Golden Hour Game Drive</h3>
+                                    <p class="text-lg text-gray-500 font-medium leading-relaxed max-w-xl">Early morning
+                                        4x4 safari adventure in Tsavo East. Spot the red elephants and enjoy a bush
+                                        breakfast.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -139,8 +159,201 @@
                             <p class="text-lg text-gray-500 font-medium">Showcasing what's involved in this exclusive
                                 adventure.</p>
                         </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="package-gallery">
-                            <!-- Dynamic gallery cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Card 1 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuHeMcmgSE9JbXEFWxj5FVxOdsbQcgKH8JADnspxYJZq41ixQWDQNZFGuj72DVPZsRGbXyVkM0uDd3Qp6Qt84N_yjhmhwets-Y1Rhl3Fu2cd-yWYDFR5dAMTEICxKPDystnvmQkDUQ93fBTaxJsvsyLarmp-RUmNZNYZdMf8ioC5PGWBB30xcSzi8jM3IIlFnXwGjZZ-mrH3BXOjJTzyGAx0YLMZM89GdVAVme4WcBKdu9-O6vRcrTHnj5rP1UWhYqe_G3WOk-KqYgE"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Sunset Safaris</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Involved
+                                        activity</p>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRuOgHWJStH-vBL47Cwcml9kPhLUAKj_A9TMgdktpb_Djqj6xOQwJNcvAIaeAQkpWxolcGreV68UNV4IeWbQqM4g_pEem17q1ovariE5MNQZH28If-ZWwfphufFpkQmCN2D-toY5CrpT-crHsDDtSm9VvDD1_b8OYj8bQl_fo3ZD2Vo2URNyCs85KKhtCx_47G45k8y7NOJqpRN_vG7vXUDy2SvzrzWule2bA-GLY5P9ZfBahnLIfxM4KBnte8xHeERX46ldWakoQR"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Wild Encounters</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Involved animal
+                                        sightings</p>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKu1OaknehArEC1zF8vJbUeqGsz1cIAUfvJdZb4JlFPh1z7RuFcKAySMHqioNSnsrzKC_Up_Lj5SKLht6JLWfUoAxPMGKEDIYdC28rF9xQRvpU4QWNL6auBp1XV5w4zGrkI6XR_MEyCXz0TOvGgZBqFGFKdRuP3UbRVh90HUq_Dr4X6hGLGpoS-FqrLHHrwPlZ4Z1Xi7PSi9SCfu2Em30zM2hF6BIMVfsthyZGr07_vo5GI9IMI6RMJytzq_yYQTR5uWOS3S4atBST"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Bush Cuisines</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Involved dining
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=1168&q=80"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Elephant Herds</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Wildlife
+                                        Observation</p>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://images.unsplash.com/photo-1547471080-7cc2032e6576?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Savanna Vistas</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Landscape Views
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://images.unsplash.com/photo-1523805081446-ed9a7bb8fd91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1171&q=80"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Majestic Lions</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Big Five
+                                        Tracking</p>
+                                </div>
+                            </div>
+                            <!-- Card 7 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Forest Canopy</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Nature Walks</p>
+                                </div>
+                            </div>
+                            <!-- Card 8 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://images.unsplash.com/photo-1534177714502-0ee466dce337?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Zebras in Motion</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Wildlife
+                                        Migration</p>
+                                </div>
+                            </div>
+                            <!-- Card 9 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://images.unsplash.com/photo-1493246507139-91e8bef99c02?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Mountain Echoes</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Highland Safari
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Card 10 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Cheetah Pursuit</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Action
+                                        Photography</p>
+                                </div>
+                            </div>
+                            <!-- Card 11 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=1168&q=80"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">River Crossing</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Dramatic Moments
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Card 12 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://images.unsplash.com/photo-1506929197327-fb89b38d6138?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Coastal Shores</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Beach Relaxation
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Card 13 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Desert Sands</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Arid Exploration
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Card 14 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1172&q=80"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Tribal Heritage</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Cultural
+                                        Interaction</p>
+                                </div>
+                            </div>
+                            <!-- Card 15 -->
+                            <div
+                                class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
+                                <img src="https://images.unsplash.com/photo-1520116468419-954410f9baeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    alt="Safari Detail">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                                    <p class="text-white font-black text-xl">Starry Bush Nights</p>
+                                    <p class="text-primary text-xs font-bold uppercase tracking-widest">Camping Luxury
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,8 +366,7 @@
                             <div class="flex flex-col">
                                 <span class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Package
                                     Price</span>
-                                <span class="text-4xl font-black text-primary tracking-tighter"
-                                    id="package-price">$0</span>
+                                <span class="text-4xl font-black text-primary tracking-tighter">$2,400</span>
                             </div>
                             <span class="text-sm font-bold text-gray-400">/ person</span>
                         </div>
@@ -175,62 +387,15 @@
                             </ul>
                         </div>
 
-                        <a href="contact.html"
-                            class="h-16 w-full rounded-2xl bg-primary text-[#14532d] flex items-center justify-center font-black text-lg shadow-xl shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 transition-all">
+                        <button
+                            class="h-16 w-full rounded-2xl bg-primary text-[#14532d] font-black text-lg shadow-xl shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 transition-all">
                             Book Itinerary
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const safariId = urlParams.get('id') || 'tsavo-red';
-            const safari = safariData[safariId];
-
-            if (safari) {
-                // Update text content
-                document.title = `${safari.name} | Nyumba Malaika & Safaris`;
-                document.getElementById('breadcrumb-title').textContent = safari.name;
-                document.getElementById('hero-title').innerHTML = `${safari.name} <span class="text-primary italic">${safari.duration} Journey</span>`;
-                document.getElementById('package-price').textContent = `$${safari.price}`;
-
-                // Update hero image
-                document.getElementById('hero-img').src = safari.mainImage;
-
-                // Update timeline
-                const timelineContainer = document.getElementById('trip-timeline');
-                timelineContainer.innerHTML = (safari.timeline || []).map((item, index) => `
-                    <div class="relative">
-                        <div class="absolute -left-[3.25rem] top-0 w-10 h-10 rounded-2xl ${index === 0 ? 'bg-primary shadow-primary/20' : 'bg-white dark:bg-white/10 border-4 border-primary/20'} flex items-center justify-center shadow-lg">
-                            <span class="${index === 0 ? 'text-[#14532d]' : ''} font-black">${item.day}</span>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <h3 class="text-2xl font-black tracking-tight">${item.title}</h3>
-                            <p class="text-lg text-gray-500 font-medium leading-relaxed max-w-xl">${item.desc}</p>
-                        </div>
-                    </div>
-                `).join('');
-
-                // Update gallery
-                const galleryGrid = document.getElementById('package-gallery');
-                galleryGrid.innerHTML = (safari.gallery || []).map(item => `
-                    <div class="group relative aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-gray-100 dark:bg-white/5">
-                        <img src="${item.img}"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            alt="${item.title}">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
-                            <p class="text-white font-black text-xl">${item.title}</p>
-                            <p class="text-primary text-xs font-bold uppercase tracking-widest">${item.sub}</p>
-                        </div>
-                    </div>
-                `).join('');
-            }
-        });
-    </script>
 </body>
 
 </html>

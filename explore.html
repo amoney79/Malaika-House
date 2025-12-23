@@ -4,11 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Explore Villas | Nyumba Malaika & Safaris</title>
+    <title>Explore Villas | Beach & Wild</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;display=swap"
         rel="stylesheet" />
     <!-- Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&amp;display=swap"
@@ -17,13 +19,14 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- JS (Main Logic) -->
+    <!-- JS (Tailwind Config + Main Logic) -->
     <script src="js/main.js"></script>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-[#121811] dark:text-gray-100 font-display antialiased">
+<body
+    class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark font-display antialiased">
     <!-- Top Navigation Bar -->
     <header
         class="sticky top-0 z-50 bg-white/95 dark:bg-[#14532d]/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm transition-all duration-300">
@@ -36,9 +39,8 @@
                         <span class="material-symbols-outlined text-[#14532d] text-2xl font-bold">beach_access</span>
                     </div>
                     <span
-                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase group-hover:text-primary transition-colors">Nyumba
-                        Malaika
-                        & Safaris</span>
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase group-hover:text-primary transition-colors">Beach
+                        & Wild</span>
                 </a>
 
                 <!-- Desktop Nav -->
@@ -54,16 +56,51 @@
 
                 <!-- Actions -->
                 <div class="flex items-center gap-3">
-                    <button id="mobile-menu-btn"
-                        class="md:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-gray-50 dark:bg-white/5 text-[#121811] dark:text-white transition-all">
-                        <span class="material-symbols-outlined text-2xl">menu</span>
+                    <button
+                        class="hidden sm:flex items-center justify-center w-10 h-10 rounded-full text-[#121811] dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+                        <span class="material-symbols-outlined text-2xl">search</span>
                     </button>
                     <a href="contact.html"
-                        class="hidden lg:flex h-11 px-6 items-center justify-center rounded-full bg-primary text-[#14532d] text-sm font-bold shadow-lg shadow-primary/20 hover:bg-[#2bd90b] transition-all">
+                        class="hidden lg:flex h-11 px-6 items-center justify-center rounded-full bg-primary text-[#14532d] text-sm font-bold shadow-lg shadow-primary/20 hover:bg-[#2bd90b] hover:scale-105 active:scale-95 transition-all">
                         Book Now
                     </a>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn"
+                        class="md:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-gray-50 dark:bg-white/5 text-[#121811] dark:text-white hover:bg-primary hover:text-[#14532d] transition-all">
+                        <span class="material-symbols-outlined text-2xl">menu</span>
+                    </button>
                 </div>
             </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 z-[60] bg-white dark:bg-[#14532d] p-6 flex flex-col gap-8 md:hidden transition-all duration-500 translate-x-full">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                        <span class="material-symbols-outlined text-[#14532d] text-2xl font-bold">beach_access</span>
+                    </div>
+                    <span
+                        class="text-xl font-black tracking-tighter text-[#121811] dark:text-white uppercase transition-colors">Beach
+                        & Wild</span>
+                </a>
+                <button id="close-menu-btn"
+                    class="w-11 h-11 rounded-full flex items-center justify-center text-[#121811] dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4">
+                <a href="index.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Home</a>
+                <a href="explore.html" class="text-4xl font-black text-primary py-2">Villas</a>
+                <a href="safaris.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Safaris</a>
+                <a href="about.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">About</a>
+                <a href="contact.html"
+                    class="text-4xl font-black text-[#121811] dark:text-white hover:text-primary transition-colors py-2">Contact</a>
+            </nav>
         </div>
     </header>
 
@@ -77,155 +114,504 @@
                     <p class="text-gray-500 font-medium max-w-xl" id="main-subheading">Choose your adventure between the
                         calming shores and the vibrant wilderness.</p>
                 </div>
+                <!-- Filter Chips -->
+                <div class="flex gap-3 overflow-x-auto no-scrollbar scroll-smooth snap-x pb-2">
+                    <button id="btn-beachfront"
+                        class="filter-chip snap-start flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-2xl bg-[#14532d] dark:bg-primary text-white dark:text-[#14532d] px-8 font-bold transition-all shadow-lg active:scale-95">
+                        Beachfront
+                    </button>
+                    <button id="btn-safari"
+                        class="filter-chip snap-start flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-2xl bg-white dark:bg-card-bg-dark border border-gray-200 dark:border-gray-800 px-8 font-bold text-gray-500 transition-all hover:border-primary hover:text-primary active:scale-95">
+                        Safari Edge
+                    </button>
+                </div>
             </div>
 
-            <!-- Villa Listings -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Card 1 -->
-                <a href="villa-detail.html?id=sunset-villa"
-                    class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-primary/20 dark:border-primary/10">
-                    <div class="relative w-full aspect-[4/3] overflow-hidden">
-                        <img src="images/villa-list-1.jpg"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            alt="Villa">
+            <!-- Dynamic Content Area -->
+            <div id="content-beachfront" class="block animate-fade-in">
+                <!-- Beachfront Showcase -->
+                <div class="mb-24">
+                    <div
+                        class="group relative flex flex-col lg:flex-row gap-12 p-10 rounded-[4rem] bg-white dark:bg-[#166534] border border-gray-100 dark:border-gray-800 shadow-2xl overflow-hidden">
+                        <div class="flex-1 flex flex-col gap-8 justify-center relative z-10">
+                            <div class="flex flex-col gap-4">
+                                <span
+                                    class="text-primary font-black uppercase tracking-[0.3em] text-[10px]">Accommodations
+                                    & Villas</span>
+                                <h2 class="text-5xl font-black tracking-tight">Beachfront <span
+                                        class="text-primary italic">Paradiso</span></h2>
+                                <p class="text-lg text-gray-500 font-medium leading-relaxed">Immerse yourself
+                                    inSwahili-inspired luxury with direct access to pristine white sands and private
+                                    infinity pools.</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <span class="text-3xl font-black text-primary">12</span>
+                                    <span class="text-[10px] font-black uppercase text-gray-400">Luxury Villas</span>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <span class="text-3xl font-black text-primary">24/7</span>
+                                    <span class="text-[10px] font-black uppercase text-gray-400">Private Butler</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1 grid grid-cols-2 gap-4 relative z-10">
+                            <div class="aspect-[4/5] rounded-[2.5rem] overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh0CK6YbQcoeJN3is1PzuRdgZqpAdYZDL7-rz-kPpDeCW71I8LPK7NsGCWq-3xwn7juQ2zQAL9KBDsxXvH3M2fJO3A247CNte4ZhvnKPtnQmY9qWiesNTRKC_VP8pJOGqiO9yX8hXLA8jOXIwB4fBmlJlII3cPWNiZRD7sFG_ONx514_OvRxIBdGAzhqvSVQqg-hXkiUCpBoygPmoX8XoVV0LH2kN221u4P5VJdjlMFMIUpomr82T5l79OQEnD6kH-9dg8tvt1gcUz"
+                                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                                    alt="Villa Interior">
+                            </div>
+                            <div class="space-y-4">
+                                <div class="aspect-square rounded-[2rem] overflow-hidden">
+                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9O9WlFIZHAYhWbaEtDoJfldMt6PtvfaFaiASBt407-CEy4reMgfo-d8KgH9u58FK5DmyxUiP4pJ8FsJ9FiSRbHpPoEqT59mnL9XzEZv3qfVbFVTz1vG7I7C1GDEXC90ORCdTzB2_uy8Mcd14LU6sxNV6X0zAvNKPgrRHhTzV5jXDWQHLbyaMnmrqeIUTfH8aOYJSDC9UG25zyaPEWU5Js1RQWu6p_WHj5Uz_VBZM1qAk3DIYl1cLalhJf18Vc7UBLGO823YqQf-lS"
+                                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                                        alt="Villa View">
+                                </div>
+                                <div
+                                    class="aspect-square rounded-[2rem] bg-primary flex items-center justify-center p-8 text-center group-hover:bg-[#2bd90b] transition-colors">
+                                    <p
+                                        class="text-[#14532d] font-black text-sm uppercase tracking-widest leading-relaxed text-sm">
+                                        Experience Ocean Serenity</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-black mb-2 group-hover:text-primary transition-colors">Nyumba
-                            Malaika</h3>
-                        <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mb-6">Jacaranda, Kenya
-                        </p>
-                        <div
-                            class="flex justify-between items-center pt-6 border-t border-gray-50 dark:border-gray-800">
-                            <span class="text-3xl font-black text-primary">$450 <span
-                                    class="text-xs text-gray-400 font-bold tracking-widest uppercase">/
-                                    night</span></span>
-                            <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                </div>
+
+                <!-- Villa Listings -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Card 1 -->
+                    <a href="villa-detail.html"
+                        class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKJznv90rOkRq2tXBx9V2_fTAs6MIOAMCf1v7xZy2CMvooqGgON2gXOYcDI4A7qsUSZp21kAVM9IKsLU5yCvOZnNuXHxHDfxolWKNw-AR8J3qIh1uuUYFxoILr5q4lAdM1sRgJiVXKRGhJLc5cfEz8bsohVbJ2A9rYNCJYqEFLSfdpGAorxBqtV3p_ZePpgJBfTYcy5neDorq2kqVy3wz8J3HpkQDEK08i7ELWjb7Ff2TXBQa2Lr36Nij4J3HVCgRuQcVdUfV_9QBb"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Villa">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-black mb-2 group-hover:text-primary transition-colors">The Azure
+                                Palm</h3>
+                            <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mb-6">Watamu, Kenya</p>
+                            <div
+                                class="flex justify-between items-center pt-6 border-t border-gray-50 dark:border-gray-800">
+                                <span class="text-3xl font-black text-primary">$450 <span
+                                        class="text-xs text-gray-400 font-bold tracking-widest uppercase">/
+                                        night</span></span>
+                                <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 2 -->
+                    <a href="villa-detail.html"
+                        class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFZSgPT9FhuaNc84zlCdpvwjdewCIMWl_OgRfVJRHwWx6Uz_KZFBNt6dpiA4Ts9catnHWmyID4oxdzbBT5s_KFX1DXG5KGHtIz99uO-GvBrV7rF7afIQpFjzGwNjytHg-PQ0TqkPj3hMo_ANW9E2DHs0WNqGLuqEAyM9wU7Xy2Ey5S_JVIGIE6SyPXr1_SgH2l13_7oJIwBLSUQhIxQy9TmzPlDNL9Zl1agIyaXP3GOuCi3rslzshwh-vygl3SuQbYIotmZDUcrFdG"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Villa">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-black mb-2 group-hover:text-primary transition-colors">The Glass
+                                House</h3>
+                            <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mb-6">Diani, Kenya</p>
+                            <div
+                                class="flex justify-between items-center pt-6 border-t border-gray-50 dark:border-gray-800">
+                                <span class="text-3xl font-black text-primary">$550 <span
+                                        class="text-xs text-gray-400 font-bold tracking-widest uppercase">/
+                                        night</span></span>
+                                <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 3 -->
+                    <a href="villa-detail.html"
+                        class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9O9WlFIZHAYhWbaEtDoJfldMt6PtvfaFaiASBt407-CEy4reMgfo-d8KgH9u58FK5DmyxUiP4pJ8FsJ9FiSRbHpPoEqT59mnL9XzEZv3qfVbFVTz1vG7I7C1GDEXC90ORCdTzB2_uy8Mcd14LU6sxNV6X0zAvNKPgrRHhTzV5jXDWQHLbyaMnmrqeIUTfH8aOYJSDC9UG25zyaPEWU5Js1RQWu6p_WHj5Uz_VBZM1qAk3DIYl1cLalhJf18Vc7UBLGO823YqQf-lS"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Villa">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-black mb-2 group-hover:text-primary transition-colors">Coral Cove
+                            </h3>
+                            <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mb-6">Malindi, Kenya</p>
+                            <div
+                                class="flex justify-between items-center pt-6 border-t border-gray-50 dark:border-gray-800">
+                                <span class="text-3xl font-black text-primary">$380 <span
+                                        class="text-xs text-gray-400 font-bold tracking-widest uppercase">/
+                                        night</span></span>
+                                <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 4 -->
+                    <a href="villa-detail.html"
+                        class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoesWLQ0C9nSvNolj3w1_oaZASkUH7dWc2WB1JAnD95tOcwoTgGuN8FAAWbCmaHfojvAziAXcAYh13wiJ38RLNPI1NQtkdnKbkZsbWSCtJ2C4rf8-VDABj3JA1Uk_1YECkn8nFW05L6uoLoc0sHDetXhfZmXRToPEXlpwgij8JTC290P62r2Iyj9SWhq0STu20hWwexPIGV-3CFafPpjxyYUPA4-pdjORPP4C9VH478FyqvICzyvGLRCPY_i-ezmL85bHbLIc1v2Cv"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Villa">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-black mb-2 group-hover:text-primary transition-colors">Savanna
+                                Oasis
+                            </h3>
+                            <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mb-6">Voi, Kenya</p>
+                            <div
+                                class="flex justify-between items-center pt-6 border-t border-gray-50 dark:border-gray-800">
+                                <span class="text-3xl font-black text-primary">$420 <span
+                                        class="text-xs text-gray-400 font-bold tracking-widest uppercase">/
+                                        night</span></span>
+                                <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 5 -->
+                    <a href="villa-detail.html"
+                        class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKJznv90rOkRq2tXBx9V2_fTAs6MIOAMCf1v7xZy2CMvooqGgON2gXOYcDI4A7qsUSZp21kAVM9IKsLU5yCvOZnNuXHxHDfxolWKNw-AR8J3qIh1uuUYFxoILr5q4lAdM1sRgJiVXKRGhJLc5cfEz8bsohVbJ2A9rYNCJYqEFLSfdpGAorxBqtV3p_ZePpgJBfTYcy5neDorq2kqVy3wz8J3HpkQDEK08i7ELWjb7Ff2TXBQa2Lr36Nij4J3HVCgRuQcVdUfV_9QBb"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Villa">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-black mb-2 group-hover:text-primary transition-colors">Indigo Bay
+                            </h3>
+                            <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mb-6">Kilifi, Kenya</p>
+                            <div
+                                class="flex justify-between items-center pt-6 border-t border-gray-50 dark:border-gray-800">
+                                <span class="text-3xl font-black text-primary">$480 <span
+                                        class="text-xs text-gray-400 font-bold tracking-widest uppercase">/
+                                        night</span></span>
+                                <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Card 6 -->
+                    <a href="villa-detail.html"
+                        class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFZSgPT9FhuaNc84zlCdpvwjdewCIMWl_OgRfVJRHwWx6Uz_KZFBNt6dpiA4Ts9catnHWmyID4oxdzbBT5s_KFX1DXG5KGHtIz99uO-GvBrV7rF7afIQpFjzGwNjytHg-PQ0TqkPj3hMo_ANW9E2DHs0WNqGLuqEAyM9wU7Xy2Ey5S_JVIGIE6SyPXr1_SgH2l13_7oJIwBLSUQhIxQy9TmzPlDNL9Zl1agIyaXP3GOuCi3rslzshwh-vygl3SuQbYIotmZDUcrFdG"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Villa">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-black mb-2 group-hover:text-primary transition-colors">The Royal
+                                Palms</h3>
+                            <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mb-6">Watamu, Kenya</p>
+                            <div
+                                class="flex justify-between items-center pt-6 border-t border-gray-50 dark:border-gray-800">
+                                <span class="text-3xl font-black text-primary">$600 <span
+                                        class="text-xs text-gray-400 font-bold tracking-widest uppercase">/
+                                        night</span></span>
+                                <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div id="content-safari" class="hidden animate-fade-in">
+                <!-- Safari Edge Showcase -->
+                <div class="mb-24">
+                    <div
+                        class="group relative flex flex-col lg:flex-row gap-12 p-10 rounded-[4rem] bg-[#14532d] border border-primary/20 shadow-2xl overflow-hidden">
+                        <div class="flex-1 flex flex-col gap-8 justify-center relative z-10">
+                            <div class="flex flex-col gap-4">
+                                <span class="text-primary font-black uppercase tracking-[0.3em] text-[10px]">Wild Parks
+                                    & Adventures</span>
+                                <h2 class="text-5xl font-black tracking-tight text-white">Safari <span
+                                        class="text-primary italic">Edge</span></h2>
+                                <p class="text-lg text-gray-300 font-medium leading-relaxed">Venture into the heart of
+                                    Tsavo East, explore ancient Gede ruins, and witness the majesty of Africa's big
+                                    five.</p>
+                            </div>
+                            <div class="flex flex-wrap gap-4">
+                                <span
+                                    class="px-5 py-2 rounded-full bg-white/10 text-white text-xs font-bold border border-white/20">National
+                                    Parks</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-white/10 text-white text-xs font-bold border border-white/20">Museums</span>
+                                <span
+                                    class="px-5 py-2 rounded-full bg-white/10 text-white text-xs font-bold border border-white/20">Wildlife</span>
+                            </div>
+                        </div>
+                        <div class="flex-1 grid grid-cols-2 gap-4 relative z-10">
+                            <div class="aspect-square rounded-[2.5rem] overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRuOgHWJStH-vBL47Cwcml9kPhLUAKj_A9TMgdktpb_Djqj6xOQwJNcvAIaeAQkpWxolcGreV68UNV4IeWbQqM4g_pEem17q1ovariE5MNQZH28If-ZWwfphufFpkQmCN2D-toY5CrpT-crHsDDtSm9VvDD1_b8OYj8bQl_fo3ZD2Vo2URNyCs85KKhtCx_47G45k8y7NOJqpRN_vG7vXUDy2SvzrzWule2bA-GLY5P9ZfBahnLIfxM4KBnte8xHeERX46ldWakoQR"
+                                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                                    alt="Safari">
+                            </div>
+                            <div class="aspect-square rounded-[2.5rem] overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuHeMcmgSE9JbXEFWxj5FVxOdsbQcgKH8JADnspxYJZq41ixQWDQNZFGuj72DVPZsRGbXyVkM0uDd3Qp6Qt84N_yjhmhwets-Y1Rhl3Fu2cd-yWYDFR5dAMTEICxKPDystnvmQkDUQ93fBTaxJsvsyLarmp-RUmNZNYZdMf8ioC5PGWBB30xcSzi8jM3IIlFnXwGjZZ-mrH3BXOjJTzyGAx0YLMZM89GdVAVme4WcBKdu9-O6vRcrTHnj5rP1UWhYqe_G3WOk-KqYgE"
+                                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                                    alt="Wildlife">
+                            </div>
                         </div>
                     </div>
-                </a>
-                <!-- Card 2 -->
-                <a href="villa-detail.html?id=glass-house"
-                    class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-primary/20 dark:border-primary/10">
-                    <div class="relative w-full aspect-[4/3] overflow-hidden">
-                        <img src="images/villa-list-2.jpg"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            alt="Villa">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-black mb-2 group-hover:text-primary transition-colors">Nyumba
-                            Malaika</h3>
-                        <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mb-6">Jacaranda, Kenya
-                        </p>
-                        <div
-                            class="flex justify-between items-center pt-6 border-t border-gray-50 dark:border-gray-800">
-                            <span class="text-3xl font-black text-primary">$550 <span
-                                    class="text-xs text-gray-400 font-bold tracking-widest uppercase">/
-                                    night</span></span>
-                            <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                </div>
+
+                <!-- Safari Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Package 1 -->
+                    <div
+                        class="group flex flex-col md:flex-row rounded-[3rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRuOgHWJStH-vBL47Cwcml9kPhLUAKj_A9TMgdktpb_Djqj6xOQwJNcvAIaeAQkpWxolcGreV68UNV4IeWbQqM4g_pEem17q1ovariE5MNQZH28If-ZWwfphufFpkQmCN2D-toY5CrpT-crHsDDtSm9VvDD1_b8OYj8bQl_fo3ZD2Vo2URNyCs85KKhtCx_47G45k8y7NOJqpRN_vG7vXUDy2SvzrzWule2bA-GLY5P9ZfBahnLIfxM4KBnte8xHeERX46ldWakoQR"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Tsavo East">
+                        </div>
+                        <div class="md:w-1/2 p-8 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-black mb-2">The Red Earth Safari</h3>
+                                <p class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Tsavo East
+                                    National Park</p>
+                                <p class="text-gray-500 text-sm leading-relaxed mb-6">Home to the "Red Elephants", this
+                                    package includes guided 4x4 tours and luxury bush meals.</p>
+                            </div>
+                            <a href="safaris.html"
+                                class="h-14 w-full rounded-2xl bg-gray-50 dark:bg-white/5 flex items-center justify-center font-black uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all">Explore
+                                Package</a>
                         </div>
                     </div>
-                </a>
-                <!-- Card 3 -->
-                <a href="villa-detail.html?id=coral-cove"
-                    class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-primary/20 dark:border-primary/10">
-                    <div class="relative w-full aspect-[4/3] overflow-hidden">
-                        <img src="images/villa-list-3.jpg"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            alt="Villa">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-black mb-2 group-hover:text-primary transition-colors">Nyumba
-                            Malaika</h3>
-                        <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mb-6">Jacaranda, Kenya
-                        </p>
-                        <div
-                            class="flex justify-between items-center pt-6 border-t border-gray-50 dark:border-gray-800">
-                            <span class="text-3xl font-black text-primary">$380 <span
-                                    class="text-xs text-gray-400 font-bold tracking-widest uppercase">/
-                                    night</span></span>
-                            <span class="material-symbols-outlined text-primary">arrow_forward</span>
+
+                    <!-- Package 2 -->
+                    <div
+                        class="group flex flex-col md:flex-row rounded-[3rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuHeMcmgSE9JbXEFWxj5FVxOdsbQcgKH8JADnspxYJZq41ixQWDQNZFGuj72DVPZsRGbXyVkM0uDd3Qp6Qt84N_yjhmhwets-Y1Rhl3Fu2cd-yWYDFR5dAMTEICxKPDystnvmQkDUQ93fBTaxJsvsyLarmp-RUmNZNYZdMf8ioC5PGWBB30xcSzi8jM3IIlFnXwGjZZ-mrH3BXOjJTzyGAx0YLMZM89GdVAVme4WcBKdu9-O6vRcrTHnj5rP1UWhYqe_G3WOk-KqYgE"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Serengeti">
+                        </div>
+                        <div class="md:w-1/2 p-8 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-black mb-2">Great Migration</h3>
+                                <p class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Serengeti NP
+                                </p>
+                                <p class="text-gray-500 text-sm leading-relaxed mb-6">Witness the legendary wildebeest
+                                    migration with our expert bush guides.</p>
+                            </div>
+                            <a href="safaris.html"
+                                class="h-14 w-full rounded-2xl bg-gray-50 dark:bg-white/5 flex items-center justify-center font-black uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all">Explore
+                                Package</a>
                         </div>
                     </div>
-                </a>
-                <!-- Card 4 -->
-                <a href="villa-detail.html?id=savanna-oasis"
-                    class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-primary/20 dark:border-primary/10">
-                    <div class="relative w-full aspect-[4/3] overflow-hidden">
-                        <img src="images/villa-list-4.jpg"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            alt="Villa">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-black mb-2 group-hover:text-primary transition-colors">Nyumba
-                            Malaika
-                        </h3>
-                        <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mb-6">Jacaranda, Kenya
-                        </p>
-                        <div
-                            class="flex justify-between items-center pt-6 border-t border-gray-50 dark:border-gray-800">
-                            <span class="text-3xl font-black text-primary">$420 <span
-                                    class="text-xs text-gray-400 font-bold tracking-widest uppercase">/
-                                    night</span></span>
-                            <span class="material-symbols-outlined text-primary">arrow_forward</span>
+
+                    <!-- Package 3 -->
+                    <div
+                        class="group flex flex-col md:flex-row rounded-[3rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRuOgHWJStH-vBL47Cwcml9kPhLUAKj_A9TMgdktpb_Djqj6xOQwJNcvAIaeAQkpWxolcGreV68UNV4IeWbQqM4g_pEem17q1ovariE5MNQZH28If-ZWwfphufFpkQmCN2D-toY5CrpT-crHsDDtSm9VvDD1_b8OYj8bQl_fo3ZD2Vo2URNyCs85KKhtCx_47G45k8y7NOJqpRN_vG7vXUDy2SvzrzWule2bA-GLY5P9ZfBahnLIfxM4KBnte8xHeERX46ldWakoQR"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Amboseli">
+                        </div>
+                        <div class="md:w-1/2 p-8 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-black mb-2">Kilimanjaro Shadows</h3>
+                                <p class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Amboseli NP
+                                </p>
+                                <p class="text-gray-500 text-sm leading-relaxed mb-6">Elephant encounters under the
+                                    stunning backdrop of Mt. Kilimanjaro.</p>
+                            </div>
+                            <a href="safaris.html"
+                                class="h-14 w-full rounded-2xl bg-gray-50 dark:bg-white/5 flex items-center justify-center font-black uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all">Explore
+                                Package</a>
                         </div>
                     </div>
-                </a>
-                <!-- Card 5 -->
-                <a href="villa-detail.html?id=indigo-bay"
-                    class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-primary/20 dark:border-primary/10">
-                    <div class="relative w-full aspect-[4/3] overflow-hidden">
-                        <img src="images/villa-list-5.jpg"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            alt="Villa">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-black mb-2 group-hover:text-primary transition-colors">Nyumba
-                            Malaika
-                        </h3>
-                        <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mb-6">Jacaranda, Kenya
-                        </p>
-                        <div
-                            class="flex justify-between items-center pt-6 border-t border-gray-50 dark:border-gray-800">
-                            <span class="text-3xl font-black text-primary">$480 <span
-                                    class="text-xs text-gray-400 font-bold tracking-widest uppercase">/
-                                    night</span></span>
-                            <span class="material-symbols-outlined text-primary">arrow_forward</span>
+
+                    <!-- Package 4 -->
+                    <div
+                        class="group flex flex-col md:flex-row rounded-[3rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuHeMcmgSE9JbXEFWxj5FVxOdsbQcgKH8JADnspxYJZq41ixQWDQNZFGuj72DVPZsRGbXyVkM0uDd3Qp6Qt84N_yjhmhwets-Y1Rhl3Fu2cd-yWYDFR5dAMTEICxKPDystnvmQkDUQ93fBTaxJsvsyLarmp-RUmNZNYZdMf8ioC5PGWBB30xcSzi8jM3IIlFnXwGjZZ-mrH3BXOjJTzyGAx0YLMZM89GdVAVme4WcBKdu9-O6vRcrTHnj5rP1UWhYqe_G3WOk-KqYgE"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Mara">
+                        </div>
+                        <div class="md:w-1/2 p-8 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-black mb-2">Maasai Mara Echo</h3>
+                                <p class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Maasai Mara
+                                </p>
+                                <p class="text-gray-500 text-sm leading-relaxed mb-6">Premium big five tracking and
+                                    cultural visits to traditional Maasai villages.</p>
+                            </div>
+                            <a href="safaris.html"
+                                class="h-14 w-full rounded-2xl bg-gray-50 dark:bg-white/5 flex items-center justify-center font-black uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all">Explore
+                                Package</a>
                         </div>
                     </div>
-                </a>
-                <!-- Card 6 -->
-                <a href="villa-detail.html?id=royal-palms"
-                    class="group flex flex-col rounded-[2.5rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-primary/20 dark:border-primary/10">
-                    <div class="relative w-full aspect-[4/3] overflow-hidden">
-                        <img src="images/villa-list-6.jpg"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            alt="Villa">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-black mb-2 group-hover:text-primary transition-colors">Nyumba
-                            Malaika</h3>
-                        <p class="text-gray-500 font-bold uppercase tracking-widest text-xs mb-6">Jacaranda, Kenya
-                        </p>
-                        <div
-                            class="flex justify-between items-center pt-6 border-t border-gray-50 dark:border-gray-800">
-                            <span class="text-3xl font-black text-primary">$600 <span
-                                    class="text-xs text-gray-400 font-bold tracking-widest uppercase">/
-                                    night</span></span>
-                            <span class="material-symbols-outlined text-primary">arrow_forward</span>
+
+                    <!-- Package 5 -->
+                    <div
+                        class="group flex flex-col md:flex-row rounded-[3rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKu1OaknehArEC1zF8vJbUeqGsz1cIAUfvJdZb4JlFPh1z7RuFcKAySMHqioNSnsrzKC_Up_Lj5SKLht6JLWfUoAxPMGKEDIYdC28rF9xQRvpU4QWNL6auBp1XV5w4zGrkI6XR_MEyCXz0TOvGgZBqFGFKdRuP3UbRVh90HUq_Dr4X6hGLGpoS-FqrLHHrwPlZ4Z1Xi7PSi9SCfu2Em30zM2hF6BIMVfsthyZGr07_vo5GI9IMI6RMJytzq_yYQTR5uWOS3S4atBST"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Ruins">
+                        </div>
+                        <div class="md:w-1/2 p-8 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-black mb-2">Heritage Tour</h3>
+                                <p class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Museums &
+                                    Ruins</p>
+                                <p class="text-gray-500 text-sm leading-relaxed mb-6">Discover the Swahili history at
+                                    Gede Ruins and Malindi Museum.</p>
+                            </div>
+                            <a href="safaris.html"
+                                class="h-14 w-full rounded-2xl bg-gray-50 dark:bg-white/5 flex items-center justify-center font-black uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all">Explore
+                                Package</a>
                         </div>
                     </div>
-                </a>
+
+                    <!-- Package 6 -->
+                    <div
+                        class="group flex flex-col md:flex-row rounded-[3rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRuOgHWJStH-vBL47Cwcml9kPhLUAKj_A9TMgdktpb_Djqj6xOQwJNcvAIaeAQkpWxolcGreV68UNV4IeWbQqM4g_pEem17q1ovariE5MNQZH28If-ZWwfphufFpkQmCN2D-toY5CrpT-crHsDDtSm9VvDD1_b8OYj8bQl_fo3ZD2Vo2URNyCs85KKhtCx_47G45k8y7NOJqpRN_vG7vXUDy2SvzrzWule2bA-GLY5P9ZfBahnLIfxM4KBnte8xHeERX46ldWakoQR"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Samburu">
+                        </div>
+                        <div class="md:w-1/2 p-8 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-black mb-2">Samburu Secrets</h3>
+                                <p class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Samburu NR</p>
+                                <p class="text-gray-500 text-sm leading-relaxed mb-6">Rare wildlife encounters and
+                                    stunning landscapes in Northern Kenya.</p>
+                            </div>
+                            <a href="safaris.html"
+                                class="h-14 w-full rounded-2xl bg-gray-50 dark:bg-white/5 flex items-center justify-center font-black uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all">Explore
+                                Package</a>
+                        </div>
+                    </div>
+
+                    <!-- Package 7 -->
+                    <div
+                        class="group flex flex-col md:flex-row rounded-[3rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuHeMcmgSE9JbXEFWxj5FVxOdsbQcgKH8JADnspxYJZq41ixQWDQNZFGuj72DVPZsRGbXyVkM0uDd3Qp6Qt84N_yjhmhwets-Y1Rhl3Fu2cd-yWYDFR5dAMTEICxKPDystnvmQkDUQ93fBTaxJsvsyLarmp-RUmNZNYZdMf8ioC5PGWBB30xcSzi8jM3IIlFnXwGjZZ-mrH3BXOjJTzyGAx0YLMZM89GdVAVme4WcBKdu9-O6vRcrTHnj5rP1UWhYqe_G3WOk-KqYgE"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Lake Nakuru">
+                        </div>
+                        <div class="md:w-1/2 p-8 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-black mb-2">Pink Lake Safari</h3>
+                                <p class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Lake Nakuru NP
+                                </p>
+                                <p class="text-gray-500 text-sm leading-relaxed mb-6">Famous for its thousands of
+                                    flamingos and rhino sanctuary.</p>
+                            </div>
+                            <a href="safaris.html"
+                                class="h-14 w-full rounded-2xl bg-gray-50 dark:bg-white/5 flex items-center justify-center font-black uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all">Explore
+                                Package</a>
+                        </div>
+                    </div>
+
+                    <!-- Package 8 -->
+                    <div
+                        class="group flex flex-col md:flex-row rounded-[3rem] overflow-hidden bg-white dark:bg-card-bg-dark shadow-xl hover:shadow-2xl transition-all border border-gray-100 dark:border-gray-800">
+                        <div class="md:w-1/2 aspect-[4/3] md:aspect-auto overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRuOgHWJStH-vBL47Cwcml9kPhLUAKj_A9TMgdktpb_Djqj6xOQwJNcvAIaeAQkpWxolcGreV68UNV4IeWbQqM4g_pEem17q1ovariE5MNQZH28If-ZWwfphufFpkQmCN2D-toY5CrpT-crHsDDtSm9VvDD1_b8OYj8bQl_fo3ZD2Vo2URNyCs85KKhtCx_47G45k8y7NOJqpRN_vG7vXUDy2SvzrzWule2bA-GLY5P9ZfBahnLIfxM4KBnte8xHeERX46ldWakoQR"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Hells Gate">
+                        </div>
+                        <div class="md:w-1/2 p-8 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-2xl font-black mb-2">Gorge Exploration</h3>
+                                <p class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Hell's Gate NP
+                                </p>
+                                <p class="text-gray-500 text-sm leading-relaxed mb-6">Cycling and rock climbing in one
+                                    of the most unique parks in Kenya.</p>
+                            </div>
+                            <a href="safaris.html"
+                                class="h-14 w-full rounded-2xl bg-gray-50 dark:bg-white/5 flex items-center justify-center font-black uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all">Explore
+                                Package</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white dark:bg-[#14532d] pt-24 pb-12 border-t border-gray-100 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-500 text-sm font-bold uppercase tracking-widest">© 2024 Nyumba Malaika & Safaris. All
-                rights reserved.</p>
+    <footer class="bg-white dark:bg-[#166534] pt-24 pb-12 border-t border-gray-100 dark:border-gray-800 mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+                <div class="flex flex-col gap-6">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-[#14532d] text-2xl font-bold">beach_access</span>
+                        </div>
+                        <span class="text-xl font-black tracking-tighter uppercase">Beach & Wild</span>
+                    </a>
+                    <p class="text-gray-500 font-medium leading-relaxed">Luxury travel curators for those who seek the
+                        perfect balance of serenity and discovery.</p>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h5 class="text-lg font-black uppercase tracking-widest text-[#121811] dark:text-white">Quick Links
+                    </h5>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="index.html"
+                                class="text-gray-500 hover:text-primary transition-colors font-bold">Home</a></li>
+                        <li><a href="explore.html"
+                                class="text-gray-500 hover:text-primary transition-colors font-bold">Villas</a></li>
+                        <li><a href="safaris.html"
+                                class="text-gray-500 hover:text-primary transition-colors font-bold">Safaris</a></li>
+                        <li><a href="about.html"
+                                class="text-gray-500 hover:text-primary transition-colors font-bold">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="flex flex-col md:flex-row justify-between items-center gap-8 pt-12 border-t border-gray-100 dark:border-gray-800">
+                <p class="text-gray-500 text-sm font-bold uppercase tracking-widest">© 2024 Beach & Wild. All rights
+                    reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Interactive Logic -->
+    <script>
+        const btnBeachfront = document.getElementById('btn-beachfront');
+        const btnSafari = document.getElementById('btn-safari');
+        const contentBeachfront = document.getElementById('content-beachfront');
+        const contentSafari = document.getElementById('content-safari');
+        const heading = document.getElementById('main-heading');
+        const subheading = document.getElementById('main-subheading');
+
+        function setActive(type) {
+            // Reset styles
+            [btnBeachfront, btnSafari].forEach(btn => {
+                btn.classList.remove('bg-[#14532d]', 'dark:bg-primary', 'text-white', 'dark:text-[#14532d]');
+                btn.classList.add('bg-white', 'dark:bg-card-bg-dark', 'text-gray-500', 'border', 'border-gray-200', 'dark:border-gray-800');
+            });
+
+            if (type === 'beachfront') {
+                btnBeachfront.classList.add('bg-[#14532d]', 'dark:bg-primary', 'text-white', 'dark:text-[#14532d]');
+                btnBeachfront.classList.remove('bg-white', 'dark:bg-card-bg-dark', 'text-gray-500', 'border');
+
+                contentBeachfront.classList.remove('hidden');
+                contentSafari.classList.add('hidden');
+
+                heading.innerHTML = 'Coastal <span class="text-primary italic">Paradise</span>';
+                subheading.innerText = 'Explore our Swahili-inspired villas and private beachfront and accomodations.';
+            } else {
+                btnSafari.classList.add('bg-[#14532d]', 'dark:bg-primary', 'text-white', 'dark:text-[#14532d]');
+                btnSafari.classList.remove('bg-white', 'dark:bg-card-bg-dark', 'text-gray-500', 'border');
+
+                contentSafari.classList.remove('hidden');
+                contentBeachfront.classList.add('hidden');
+
+                heading.innerHTML = 'National <span class="text-primary italic">Edge</span>';
+                subheading.innerText = 'Discover wild animal safaris, historic museums, and national parks.';
+            }
+        }
+
+        btnBeachfront.addEventListener('click', () => setActive('beachfront'));
+        btnSafari.addEventListener('click', () => setActive('safari'));
+    </script>
 </body>
 
 </html>
