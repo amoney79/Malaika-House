@@ -18,6 +18,26 @@ const villaData = {
             { img: 'images/villa-list-4.jpg', title: 'Lounge Area', sub: 'Coastal Living' }
         ]
     },
+    'villa-premium': {
+        name: 'Nyumba Malaika - Premium Suite',
+        location: 'Jacaranda, Kenya',
+        price: '950',
+        description: 'Our most exclusive premium suite offering unparalleled luxury with personalized concierge service, private spa facilities, and breathtaking panoramic views. Perfect for discerning guests seeking the ultimate coastal experience.',
+        host: 'Amina',
+        mainImage: 'images/villa-card-4.jpg',
+        images: [
+            'images/villa-list-4.jpg',
+            'images/villa-list-5.jpg',
+            'images/villa-list-6.jpg'
+        ],
+        amenities: ['Premium Concierge Service', 'Private Spa & Wellness Center', 'Helicopter Pad Access', 'Infinity Ocean Pool', 'Personal Butler 24/7', 'Gourmet Chef Service'],
+        gallery: [
+            { img: 'images/villa-card-4.jpg', title: 'Premium Living', sub: 'Ultimate Luxury' },
+            { img: 'images/villa-list-4.jpg', title: 'Ocean Panorama', sub: 'Exclusive Views' },
+            { img: 'images/villa-list-5.jpg', title: 'Spa Retreat', sub: 'Wellness Haven' },
+            { img: 'images/villa-list-6.jpg', title: 'Private Terrace', sub: 'Coastal Elegance' }
+        ]
+    },
     'sunset-villa': {
         name: 'Nyumba Malaika - Sunset',
         location: 'Jacaranda, Kenya',
