@@ -4,18 +4,21 @@ const villaData = {
         location: 'Jacaranda, Kenya',
         price: '450',
         description: 'Elite luxury meets coastal charm. Nyumba Malaika offers the most exclusive experience in Jacaranda with sprawling estates and unmatched privacy.',
-        host: 'Amina',
+        host: 'Eddison',
         mainImage: 'images/villa-card-7.jpg',
         images: [
-            'images/villa-list-7.jpg',
-            'images/villa-list-3.jpg',
-            'images/villa-list-4.jpg'
+            'images/villa 1/villa-1.jpg',
+            'images/villa 1/villa-2.jpg',
+            'images/villa 1/villa-3.jpg'
         ],
         amenities: ['Private Infinity Pool', 'Starlink Wifi', 'Private Chef', 'Beach Access'],
         gallery: [
-            { img: 'images/villa-list-7.jpg', title: 'The Estate', sub: 'Majestic Living' },
-            { img: 'images/villa-list-3.jpg', title: 'Ocean View', sub: 'Infinite Horizon' },
-            { img: 'images/villa-list-4.jpg', title: 'Lounge Area', sub: 'Coastal Living' }
+            { img: 'images/villa 1/villa-4.jpg', title: 'The Estate', sub: 'Majestic Living' },
+            { img: 'images/villa 1/villa-5.jpg', title: 'Ocean View', sub: 'Infinite Horizon' },
+            { img: 'images/villa 1/villa-6.jpg', title: 'Lounge Area', sub: 'Coastal Living' },
+            { img: 'images/villa 1/villa-7.jpg', title: 'Lounge Area', sub: 'Coastal Living' },
+            { img: 'images/villa 1/villa-8.jpg', title: 'Lounge Area', sub: 'Coastal Living' },
+            { img: 'images/villa 1/villa-9.jpg', title: 'Lounge Area', sub: 'Coastal Living' }
         ]
     },
     'villa-premium': {
@@ -26,16 +29,18 @@ const villaData = {
         host: 'Amina',
         mainImage: 'images/villa-card-4.jpg',
         images: [
-            'images/villa-list-4.jpg',
-            'images/villa-list-5.jpg',
-            'images/villa-list-6.jpg'
+            'images/villa 2/villa-1.jpg',
+            'images/villa 2/villa-2.jpg',
+            'images/villa 2/villa-3.jpg'
         ],
         amenities: ['Premium Concierge Service', 'Private Spa & Wellness Center', 'Helicopter Pad Access', 'Infinity Ocean Pool', 'Personal Butler 24/7', 'Gourmet Chef Service'],
         gallery: [
-            { img: 'images/villa-card-4.jpg', title: 'Premium Living', sub: 'Ultimate Luxury' },
-            { img: 'images/villa-list-4.jpg', title: 'Ocean Panorama', sub: 'Exclusive Views' },
-            { img: 'images/villa-list-5.jpg', title: 'Spa Retreat', sub: 'Wellness Haven' },
-            { img: 'images/villa-list-6.jpg', title: 'Private Terrace', sub: 'Coastal Elegance' }
+            { img: 'images/villa 2/villa-4.jpg', title: 'Premium Living', sub: 'Ultimate Luxury' },
+            { img: 'images/villa 2/villa-5.jpg', title: 'Ocean Panorama', sub: 'Exclusive Views' },
+            { img: 'images/villa 2/villa-6.jpg', title: 'Spa Retreat', sub: 'Wellness Haven' },
+            { img: 'images/villa 2/villa-7.jpg', title: 'Private Terrace', sub: 'Coastal Elegance' },
+            { img: 'images/villa 2/villa-8.jpg', title: 'Private Terrace', sub: 'Coastal Elegance' },
+            { img: 'images/villa 2/villa-9.jpg', title: 'Private Terrace', sub: 'Coastal Elegance' }
         ]
     },
     'sunset-villa': {
@@ -46,15 +51,18 @@ const villaData = {
         host: 'Amina',
         mainImage: 'images/Villa-card-1.jpg',
         images: [
-            'images/villa-list-1.jpg',
-            'images/villa-list-2.jpg',
-            'images/villa-list-3.jpg'
+            'images/villa 3/villa-1.jpg',
+            'images/villa 3/villa-2.jpg',
+            'images/villa 3/villa-3.jpg'
         ],
         amenities: ['Private Infinity Pool', 'Starlink Wifi', 'Private Chef', 'Beach Access'],
         gallery: [
-            { img: 'images/Villa-card-1.jpg', title: 'Beachfront Bliss', sub: 'Included activity' },
-            { img: 'images/villa-list-1.jpg', title: 'Safari Connection', sub: 'Included access' },
-            { img: 'images/villa-list-2.jpg', title: 'Tsavo Gateway', sub: 'Nearby adventure' }
+            { img: 'images/villa 3/villa-4.jpg', title: 'Beachfront Bliss', sub: 'Included activity' },
+            { img: 'images/villa 3/villa-5.jpg', title: 'Safari Connection', sub: 'Included access' },
+            { img: 'images/villa 3/villa-6.jpg', title: 'Tsavo Gateway', sub: 'Nearby adventure' },
+            { img: 'images/villa 3/villa-7.jpg', title: 'Tsavo Gateway', sub: 'Nearby adventure' },
+            { img: 'images/villa 3/villa-8.jpg', title: 'Tsavo Gateway', sub: 'Nearby adventure' },
+            { img: 'images/villa 3/villa-9.jpg', title: 'Tsavo Gateway', sub: 'Nearby adventure' }
         ]
     },
     'glass-house': {
@@ -65,13 +73,18 @@ const villaData = {
         host: 'Sarah',
         mainImage: 'images/Villa-card-2.jpg',
         images: [
-            'images/villa-list-5.jpg',
-            'images/villa-list-6.jpg'
+            'images/villa 4/villa-1.jpg',
+            'images/villa 4/villa-2.jpg',
+            'images/villa 4/villa-3.jpg'
         ],
         amenities: ['360° Glass Walls', 'Smart Automation', 'Rooftop Lounge', 'Infinity Edge Pool'],
         gallery: [
-            { img: 'images/Villa-card-2.jpg', title: 'Transparency', sub: 'Modern Design' },
-            { img: 'images/villa-list-5.jpg', title: 'Jacaranda Skyline', sub: 'Sunset Horizon' }
+            { img: 'images/villa 4/villa-4.jpg', title: 'Transparency', sub: 'Modern Design' },
+            { img: 'images/villa 4/villa-5.jpg', title: 'Jacaranda Skyline', sub: 'Sunset Horizon' },
+            { img: 'images/villa 4/villa-6.jpg', title: 'Jacaranda Skyline', sub: 'Sunset Horizon' },
+            { img: 'images/villa 4/villa-7.jpg', title: 'Jacaranda Skyline', sub: 'Sunset Horizon' },
+            { img: 'images/villa 4/villa-8.jpg', title: 'Jacaranda Skyline', sub: 'Sunset Horizon' },
+            { img: 'images/villa 4/villa-9.jpg', title: 'Jacaranda Skyline', sub: 'Sunset Horizon' }
         ]
     },
     'coral-cove': {
@@ -82,12 +95,18 @@ const villaData = {
         host: 'David',
         mainImage: 'images/Villa-card-3.jpg',
         images: [
-            'images/villa-list-6.jpg',
-            'images/villa-list-8.jpg'
+            'images/villa 5/villa-1.jpg',
+            'images/villa 5/villa-2.jpg',
+            'images/villa 5/villa-3.jpg'
         ],
         amenities: ['Coral Garden', 'Natural Stone Tubs', 'Private Jetty', 'Snorkeling Gear'],
         gallery: [
-            { img: 'images/Villa-card-3.jpg', title: 'Cliffside', sub: 'Natural Beauty' }
+            { img: 'images/villa 5/villa-4.jpg', title: 'Cliffside', sub: 'Natural Beauty' },
+            { img: 'images/villa 5/villa-5.jpg', title: 'Cliffside', sub: 'Natural Beauty' },
+            { img: 'images/villa 5/villa-6.jpg', title: 'Cliffside', sub: 'Natural Beauty' },
+            { img: 'images/villa 5/villa-7.jpg', title: 'Cliffside', sub: 'Natural Beauty' },
+            { img: 'images/villa 5/villa-8.jpg', title: 'Cliffside', sub: 'Natural Beauty' },
+            { img: 'images/villa 5/villa-9.jpg', title: 'Cliffside', sub: 'Natural Beauty' }
         ]
     },
     'savanna-oasis': {
@@ -98,12 +117,18 @@ const villaData = {
         host: 'Suleiman',
         mainImage: 'images/villa-card-5.jpg',
         images: [
-            'images/villa-list-8.jpg',
-            'images/villa-list-1.jpg'
+            'images/villa 6/villa-1.jpg',
+            'images/villa 6/villa-2.jpg',
+            'images/villa 6/villa-3.jpg'
         ],
         amenities: ['Waterhole View', 'Guided Safari Safaris', 'Luxury Bush Dining', 'Star-Gazing Deck'],
         gallery: [
-            { img: 'images/villa-card-5.jpg', title: 'Savanna plains', sub: 'Wild Life' }
+            { img: 'images/villa 6/villa-4.jpg', title: 'Savanna plains', sub: 'Wild Life' },
+            { img: 'images/villa 6/villa-5.jpg', title: 'Savanna plains', sub: 'Wild Life' },
+            { img: 'images/villa 6/villa-6.jpg', title: 'Savanna plains', sub: 'Wild Life' },
+            { img: 'images/villa 6/villa-7.jpg', title: 'Savanna plains', sub: 'Wild Life' },
+            { img: 'images/villa 6/villa-8.jpg', title: 'Savanna plains', sub: 'Wild Life' },
+            { img: 'images/villa 6/villa-9.jpg', title: 'Savanna plains', sub: 'Wild Life' }
         ]
     },
     'indigo-bay': {
@@ -114,12 +139,18 @@ const villaData = {
         host: 'Fatuma',
         mainImage: 'images/villa-card-8.jpg',
         images: [
-            'images/villa-list-1.jpg',
-            'images/villa-list-2.jpg'
+            'images/villa 7/villa-1.jpg',
+            'images/villa 7/villa-2.jpg',
+            'images/villa 7/villa-3.jpg'
         ],
         amenities: ['Private Pier', 'Infinity Creek Pool', 'Water Sports Equipment', 'Seafood Terrace'],
         gallery: [
-            { img: 'images/villa-card-8.jpg', title: 'The Bay', sub: 'Calm Waters' }
+            { img: 'images/villa 7/villa-4.jpg', title: 'The Bay', sub: 'Calm Waters' },
+            { img: 'images/villa 7/villa-5.jpg', title: 'The Bay', sub: 'Calm Waters' },
+            { img: 'images/villa 7/villa-6.jpg', title: 'The Bay', sub: 'Calm Waters' },
+            { img: 'images/villa 7/villa-7.jpg', title: 'The Bay', sub: 'Calm Waters' },
+            { img: 'images/villa 7/villa-8.jpg', title: 'The Bay', sub: 'Calm Waters' },
+            { img: 'images/villa 7/villa-9.jpg', title: 'The Bay', sub: 'Calm Waters' }
         ]
     },
     'royal-palms': {
@@ -130,12 +161,18 @@ const villaData = {
         host: 'Amina',
         mainImage: 'images/Villa-card-6.jpg',
         images: [
-            'images/villa-list-2.jpg',
-            'images/villa-list-3.jpg'
+            'images/villa 8/villa-1.jpg',
+            'images/villa 8/villa-2.jpg',
+            'images/villa 8/villa-3.jpg'
         ],
         amenities: ['Sprawling Gardens', 'Private Butler', 'Olympic-Sized Pool', 'Helipad Access'],
         gallery: [
-            { img: 'images/Villa-card-6.jpg', title: 'The Estate', sub: 'Majestic Living' }
+            { img: 'images/villa 8/villa-4.jpg', title: 'The Estate', sub: 'Majestic Living' },
+            { img: 'images/villa 8/villa-5.jpg', title: 'The Estate', sub: 'Majestic Living' },
+            { img: 'images/villa 8/villa-6.jpg', title: 'The Estate', sub: 'Majestic Living' },
+            { img: 'images/villa 8/villa-7.jpg', title: 'The Estate', sub: 'Majestic Living' },
+            { img: 'images/villa 8/villa-8.jpg', title: 'The Estate', sub: 'Majestic Living' },
+            { img: 'images/villa 8/villa-9.jpg', title: 'The Estate', sub: 'Majestic Living' }
         ]
     },
     'azure-palm': {
@@ -146,25 +183,31 @@ const villaData = {
         host: 'Amina',
         mainImage: 'images/villa-list-4.jpg',
         images: [
-            'images/villa-list-4.jpg',
-            'images/villa-list-7.jpg'
+            'images/villa 9/villa-1.jpg',
+            'images/villa 9/villa-2.jpg',
+            'images/villa 9/villa-3.jpg'
         ],
         amenities: ['Oceanfront Pool', 'Private Beach Access', 'Personal Chef', 'High-Speed Wi-Fi'],
         gallery: [
-            { img: 'images/villa-list-4.jpg', title: 'Ocean View', sub: 'Infinite Horizon' }
+            { img: 'images/villa 9/villa-4.jpg', title: 'Ocean View', sub: 'Infinite Horizon' },
+            { img: 'images/villa 9/villa-5.jpg', title: 'Ocean View', sub: 'Infinite Horizon' },
+            { img: 'images/villa 9/villa-6.jpg', title: 'Ocean View', sub: 'Infinite Horizon' },
+            { img: 'images/villa 9/villa-7.jpg', title: 'Ocean View', sub: 'Infinite Horizon' },
+            { img: 'images/villa 9/villa-8.jpg', title: 'Ocean View', sub: 'Infinite Horizon' },
+            { img: 'images/villa 9/villa-9.jpg', title: 'Ocean View', sub: 'Infinite Horizon' }
         ]
     }
 };
 
 const safariData = {
     'red-earth': {
-        name: 'The Red Earth Safari',
-        location: 'Tsavo East, Kenya',
+        name: 'Amboseli National Parks Safari',
+        location: 'Amboseli, Kenya',
         price: '1,200',
         description: 'Discover the famous red elephants of Tsavo and experience the ultimate wilderness adventure.',
         mainImage: 'images/safari-grid-2.jpg',
         timeline: [
-            { day: '01', title: 'Arrival & Tsavo Entry', desc: 'Transfer from the coast to Tsavo East.' },
+            { day: '01', title: 'Arrival & Amboseli Entry', desc: 'Transfer from the coast to Tsavo East.' },
             { day: '02', title: 'Big Five Tracking', desc: 'Full day of exploration.' },
             { day: '03', title: 'Sunrise Drive & Departure', desc: 'Final game drive at dawn.' }
         ],
@@ -173,8 +216,8 @@ const safariData = {
         ]
     },
     'great-migration': {
-        name: 'Great Migration',
-        location: 'Serengeti NP',
+        name: 'Kenya Safaris',
+        location: 'Kenya ',
         price: '1,800',
         description: 'Witness the largest mass movement of land mammals on earth.',
         mainImage: 'images/Safari-grid-1.jpg',
@@ -188,8 +231,8 @@ const safariData = {
         ]
     },
     'kilimanjaro-shadows': {
-        name: 'Kilimanjaro Shadows',
-        location: 'Amboseli NP',
+        name: 'Tsavo National Park Safari',
+        location: 'Tsavo',
         price: '950',
         description: 'Elephant encounters under Mt. Kilimanjaro.',
         mainImage: 'images/safari-grid-3.jpg',
@@ -202,8 +245,8 @@ const safariData = {
         ]
     },
     'maasai-mara-echo': {
-        name: 'Maasai Mara Echo',
-        location: 'Maasai Mara',
+        name: 'Lake Nakuru Safari',
+        location: 'Nakuru',
         price: '1,500',
         description: 'Premium big five tracking and cultural visits.',
         mainImage: 'images/safari-grid-4.jpg',
@@ -275,13 +318,26 @@ const safariData = {
         location: 'Museums & Ruins',
         price: '150',
         description: 'Discover the Swahili history at Gede Ruins and Malindi Museum.',
-        mainImage: 'images/safari-grid-2.jpg',
+        mainImage: 'images/ruins/ruins-1.jpg',
         timeline: [
             { day: '01', title: 'Ancient Gede', desc: 'Guided walk through the 12th-century ruins.' },
             { day: '02', title: 'Malindi Museum', desc: 'Swahili artifacts and colonial history.' }
         ],
         gallery: [
-            { img: 'images/safari-grid-2.jpg', title: 'Ancient Gede', sub: 'Swahili History' }
+            { img: 'images/ruins/ruins-2.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/ruins/ruins-3.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/ruins/ruins-4.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/ruins/ruins-5.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/ruins/ruins-6.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/safari-grid-7.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/safari-grid-8.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/safari-grid-9.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/safari-grid-10.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/safari-grid-11.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/safari-grid-12.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/safari-grid-13.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/safari-grid-14.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/safari-grid-15.jpg', title: 'Ancient Gede', sub: 'Swahili History' }
         ]
     }
 };
