@@ -88,7 +88,7 @@ const villaData = {
         ]
     },
     'coral-cove': {
-        name: 'Nyumba Malaika - Coral Cove',
+        name: 'Nyumba Malaika',
         location: 'Jacaranda, Kenya',
         price: '380',
         description: 'A peaceful retreat nestled among ancient coral cliffs with private beach access and lush tropical gardens.',
