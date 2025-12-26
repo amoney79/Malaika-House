@@ -13,16 +13,16 @@ const villaData = {
         ],
         amenities: ['Private Infinity Pool', 'Starlink Wifi', 'Private Chef', 'Beach Access'],
         gallery: [
-            { img: 'images/villa 1/villa-4.jpg', title: 'The Estate', sub: 'Majestic Living' },
-            { img: 'images/villa 1/villa-5.jpg', title: 'Ocean View', sub: 'Infinite Horizon' },
-            { img: 'images/villa 1/villa-6.jpg', title: 'Lounge Area', sub: 'Coastal Living' },
-            { img: 'images/villa 1/villa-7.jpg', title: 'Lounge Area', sub: 'Coastal Living' },
-            { img: 'images/villa 1/villa-8.jpg', title: 'Lounge Area', sub: 'Coastal Living' },
-            { img: 'images/villa 1/villa-9.jpg', title: 'Lounge Area', sub: 'Coastal Living' }
+            { img: 'images/villa 1/villa-4.jpg', title: 'Nyumba Malaika', sub: 'Majestic Living' },
+            { img: 'images/villa 1/villa-5.jpg', title: 'Nyumba Malaika', sub: 'Infinite Horizon' },
+            { img: 'images/villa 1/villa-6.jpg', title: 'Nyumba Malaika', sub: 'Coastal Living' },
+            { img: 'images/villa 1/villa-7.jpg', title: 'Nyumba Malaika', sub: 'Coastal Living' },
+            { img: 'images/villa 1/villa-8.jpg', title: 'Nyumba Malaika', sub: 'Coastal Living' },
+            { img: 'images/villa 1/villa-9.jpg', title: 'Nyumba Malaika', sub: 'Coastal Living' }
         ]
     },
     'villa-premium': {
-        name: 'Nyumba Malaika - Premium Suite',
+        name: 'Nyumba Malaika',
         location: 'Jacaranda, Kenya',
         price: '950',
         description: 'Our most exclusive premium suite offering unparalleled luxury with personalized concierge service, private spa facilities, and breathtaking panoramic views. Perfect for discerning guests seeking the ultimate coastal experience.',
@@ -35,16 +35,16 @@ const villaData = {
         ],
         amenities: ['Premium Concierge Service', 'Private Spa & Wellness Center', 'Helicopter Pad Access', 'Infinity Ocean Pool', 'Personal Butler 24/7', 'Gourmet Chef Service'],
         gallery: [
-            { img: 'images/villa 2/villa-4.jpg', title: 'Premium Living', sub: 'Ultimate Luxury' },
-            { img: 'images/villa 2/villa-5.jpg', title: 'Ocean Panorama', sub: 'Exclusive Views' },
-            { img: 'images/villa 2/villa-6.jpg', title: 'Spa Retreat', sub: 'Wellness Haven' },
-            { img: 'images/villa 2/villa-7.jpg', title: 'Private Terrace', sub: 'Coastal Elegance' },
-            { img: 'images/villa 2/villa-8.jpg', title: 'Private Terrace', sub: 'Coastal Elegance' },
-            { img: 'images/villa 2/villa-9.jpg', title: 'Private Terrace', sub: 'Coastal Elegance' }
+            { img: 'images/villa 2/villa-4.jpg', title: 'Nyumba Malaika', sub: 'Ultimate Luxury' },
+            { img: 'images/villa 2/villa-5.jpg', title: 'Nyumba Malaika', sub: 'Exclusive Views' },
+            { img: 'images/villa 2/villa-6.jpg', title: 'Nyumba Malaika', sub: 'Wellness Haven' },
+            { img: 'images/villa 2/villa-7.jpg', title: 'Nyumba Malaika', sub: 'Coastal Elegance' },
+            { img: 'images/villa 2/villa-8.jpg', title: 'Nyumba Malaika', sub: 'Coastal Elegance' },
+            { img: 'images/villa 2/villa-9.jpg', title: 'Nyumba Malaika', sub: 'Coastal Elegance' }
         ]
     },
     'sunset-villa': {
-        name: 'Nyumba Malaika - Sunset',
+        name: 'Nyumba Malaika',
         location: 'Jacaranda, Kenya',
         price: '450',
         description: 'Experience luxury steps away from the ocean. This villa features a private pool, direct beach access, and is located just minutes from the famous Tsavo East National Park safari gate.',
@@ -57,16 +57,16 @@ const villaData = {
         ],
         amenities: ['Private Infinity Pool', 'Starlink Wifi', 'Private Chef', 'Beach Access'],
         gallery: [
-            { img: 'images/villa 3/villa-4.jpg', title: 'Beachfront Bliss', sub: 'Included activity' },
-            { img: 'images/villa 3/villa-5.jpg', title: 'Safari Connection', sub: 'Included access' },
-            { img: 'images/villa 3/villa-6.jpg', title: 'Tsavo Gateway', sub: 'Nearby adventure' },
-            { img: 'images/villa 3/villa-7.jpg', title: 'Tsavo Gateway', sub: 'Nearby adventure' },
-            { img: 'images/villa 3/villa-8.jpg', title: 'Tsavo Gateway', sub: 'Nearby adventure' },
-            { img: 'images/villa 3/villa-9.jpg', title: 'Tsavo Gateway', sub: 'Nearby adventure' }
+            { img: 'images/villa 3/villa-4.jpg', title: 'Nyumba Malaika', sub: 'Included activity' },
+            { img: 'images/villa 3/villa-5.jpg', title: 'Nyumba Malaika', sub: 'Included access' },
+            { img: 'images/villa 3/villa-6.jpg', title: 'Nyumba Malaika', sub: 'Nearby adventure' },
+            { img: 'images/villa 3/villa-7.jpg', title: 'Nyumba Malaika', sub: 'Nearby adventure' },
+            { img: 'images/villa 3/villa-8.jpg', title: 'Nyumba Malaika', sub: 'Nearby adventure' },
+            { img: 'images/villa 3/villa-9.jpg', title: 'Nyumba Malaika', sub: 'Nearby adventure' }
         ]
     },
     'glass-house': {
-        name: 'Nyumba Malaika - Glass House',
+        name: 'Nyumba Malaika',
         location: 'Jacaranda, Kenya',
         price: '550',
         description: 'A modern architectural marvel featuring floor-to-ceiling glass walls with panoramic ocean views and ultra-minimalist interiors.',
@@ -77,14 +77,14 @@ const villaData = {
             'images/villa 4/villa-2.jpg',
             'images/villa 4/villa-3.jpg'
         ],
-        amenities: ['360° Glass Walls', 'Smart Automation', 'Rooftop Lounge', 'Infinity Edge Pool'],
+        amenities: ['360° Walls', 'Smart Automation', 'Lounge', 'Infinity Pool'],
         gallery: [
-            { img: 'images/villa 4/villa-4.jpg', title: 'Transparency', sub: 'Modern Design' },
-            { img: 'images/villa 4/villa-5.jpg', title: 'Jacaranda Skyline', sub: 'Sunset Horizon' },
-            { img: 'images/villa 4/villa-6.jpg', title: 'Jacaranda Skyline', sub: 'Sunset Horizon' },
-            { img: 'images/villa 4/villa-7.jpg', title: 'Jacaranda Skyline', sub: 'Sunset Horizon' },
-            { img: 'images/villa 4/villa-8.jpg', title: 'Jacaranda Skyline', sub: 'Sunset Horizon' },
-            { img: 'images/villa 4/villa-9.jpg', title: 'Jacaranda Skyline', sub: 'Sunset Horizon' }
+            { img: 'images/villa 4/villa-4.jpg', title: 'Nyumba Malaika', sub: 'Modern Design' },
+            { img: 'images/villa 4/villa-5.jpg', title: 'Nyumba Malaika', sub: 'Sunset Horizon' },
+            { img: 'images/villa 4/villa-6.jpg', title: 'Nyumba Malaika', sub: 'Sunset Horizon' },
+            { img: 'images/villa 4/villa-7.jpg', title: 'Nyumba Malaika', sub: 'Sunset Horizon' },
+            { img: 'images/villa 4/villa-8.jpg', title: 'Nyumba Malaika', sub: 'Sunset Horizon' },
+            { img: 'images/villa 4/villa-9.jpg', title: 'Nyumba Malaika', sub: 'Sunset Horizon' }
         ]
     },
     'coral-cove': {
@@ -101,16 +101,16 @@ const villaData = {
         ],
         amenities: ['Coral Garden', 'Natural Stone Tubs', 'Private Jetty', 'Snorkeling Gear'],
         gallery: [
-            { img: 'images/villa 5/villa-4.jpg', title: 'Cliffside', sub: 'Natural Beauty' },
-            { img: 'images/villa 5/villa-5.jpg', title: 'Cliffside', sub: 'Natural Beauty' },
-            { img: 'images/villa 5/villa-6.jpg', title: 'Cliffside', sub: 'Natural Beauty' },
-            { img: 'images/villa 5/villa-7.jpg', title: 'Cliffside', sub: 'Natural Beauty' },
-            { img: 'images/villa 5/villa-8.jpg', title: 'Cliffside', sub: 'Natural Beauty' },
-            { img: 'images/villa 5/villa-9.jpg', title: 'Cliffside', sub: 'Natural Beauty' }
+            { img: 'images/villa 5/villa-4.jpg', title: 'Nyumba Malaika', sub: 'Natural Beauty' },
+            { img: 'images/villa 5/villa-5.jpg', title: 'Nyumba Malaika', sub: 'Natural Beauty' },
+            { img: 'images/villa 5/villa-6.jpg', title: 'Nyumba Malaika', sub: 'Natural Beauty' },
+            { img: 'images/villa 5/villa-7.jpg', title: 'Nyumba Malaika', sub: 'Natural Beauty' },
+            { img: 'images/villa 5/villa-8.jpg', title: 'Nyumba Malaika', sub: 'Natural Beauty' },
+            { img: 'images/villa 5/villa-9.jpg', title: 'Nyumba Malaika', sub: 'Natural Beauty' }
         ]
     },
     'savanna-oasis': {
-        name: 'Nyumba Malaika - Savanna',
+        name: 'Nyumba Malaika',
         location: 'Jacaranda, Kenya',
         price: '420',
         description: 'A luxurious lodge situated on the edge of Tsavo East, offering front-row seats to the majestic wildlife and African plains.',
@@ -123,16 +123,16 @@ const villaData = {
         ],
         amenities: ['Waterhole View', 'Guided Safari Safaris', 'Luxury Bush Dining', 'Star-Gazing Deck'],
         gallery: [
-            { img: 'images/villa 6/villa-4.jpg', title: 'Savanna plains', sub: 'Wild Life' },
-            { img: 'images/villa 6/villa-5.jpg', title: 'Savanna plains', sub: 'Wild Life' },
-            { img: 'images/villa 6/villa-6.jpg', title: 'Savanna plains', sub: 'Wild Life' },
-            { img: 'images/villa 6/villa-7.jpg', title: 'Savanna plains', sub: 'Wild Life' },
-            { img: 'images/villa 6/villa-8.jpg', title: 'Savanna plains', sub: 'Wild Life' },
-            { img: 'images/villa 6/villa-9.jpg', title: 'Savanna plains', sub: 'Wild Life' }
+            { img: 'images/villa 6/villa-4.jpg', title: 'Nyumba Malaika', sub: 'Wild Life' },
+            { img: 'images/villa 6/villa-5.jpg', title: 'Nyumba Malaika', sub: 'Wild Life' },
+            { img: 'images/villa 6/villa-6.jpg', title: 'Nyumba Malaika', sub: 'Wild Life' },
+            { img: 'images/villa 6/villa-7.jpg', title: 'Nyumba Malaika', sub: 'Wild Life' },
+            { img: 'images/villa 6/villa-8.jpg', title: 'Nyumba Malaika', sub: 'Wild Life' },
+            { img: 'images/villa 6/villa-9.jpg', title: 'Nyumba Malaika', sub: 'Wild Life' }
         ]
     },
     'indigo-bay': {
-        name: 'Nyumba Malaika - Indigo Bay',
+        name: 'Nyumba Malaika',
         location: 'Jacaranda, Kenya',
         price: '480',
         description: 'A contemporary villa overlooking the turquoise waters of Kilifi Creek, perfect for water sports enthusiasts and relaxation seekers alike.',
@@ -145,16 +145,16 @@ const villaData = {
         ],
         amenities: ['Private Pier', 'Infinity Creek Pool', 'Water Sports Equipment', 'Seafood Terrace'],
         gallery: [
-            { img: 'images/villa 7/villa-4.jpg', title: 'The Bay', sub: 'Calm Waters' },
-            { img: 'images/villa 7/villa-5.jpg', title: 'The Bay', sub: 'Calm Waters' },
-            { img: 'images/villa 7/villa-6.jpg', title: 'The Bay', sub: 'Calm Waters' },
-            { img: 'images/villa 7/villa-7.jpg', title: 'The Bay', sub: 'Calm Waters' },
-            { img: 'images/villa 7/villa-8.jpg', title: 'The Bay', sub: 'Calm Waters' },
-            { img: 'images/villa 7/villa-9.jpg', title: 'The Bay', sub: 'Calm Waters' }
+            { img: 'images/villa 7/villa-4.jpg', title: 'Nyumba Malaika', sub: 'Calm Waters' },
+            { img: 'images/villa 7/villa-5.jpg', title: 'Nyumba Malaika', sub: 'Calm Waters' },
+            { img: 'images/villa 7/villa-6.jpg', title: 'Nyumba Malaika', sub: 'Calm Waters' },
+            { img: 'images/villa 7/villa-7.jpg', title: 'Nyumba Malaika', sub: 'Calm Waters' },
+            { img: 'images/villa 7/villa-8.jpg', title: 'Nyumba Malaika', sub: 'Calm Waters' },
+            { img: 'images/villa 7/villa-9.jpg', title: 'Nyumba Malaika', sub: 'Calm Waters' }
         ]
     },
     'royal-palms': {
-        name: 'Nyumba Malaika - Royal Palms',
+        name: 'Nyumba Malaika',
         location: 'Jacaranda, Kenya',
         price: '600',
         description: 'Elite luxury meets coastal charm. The Royal Palms offers the most exclusive experience in Watamu with sprawling estates and unmatched privacy.',
@@ -167,16 +167,16 @@ const villaData = {
         ],
         amenities: ['Sprawling Gardens', 'Private Butler', 'Olympic-Sized Pool', 'Helipad Access'],
         gallery: [
-            { img: 'images/villa 8/villa-4.jpg', title: 'The Estate', sub: 'Majestic Living' },
-            { img: 'images/villa 8/villa-5.jpg', title: 'The Estate', sub: 'Majestic Living' },
-            { img: 'images/villa 8/villa-6.jpg', title: 'The Estate', sub: 'Majestic Living' },
-            { img: 'images/villa 8/villa-7.jpg', title: 'The Estate', sub: 'Majestic Living' },
-            { img: 'images/villa 8/villa-8.jpg', title: 'The Estate', sub: 'Majestic Living' },
-            { img: 'images/villa 8/villa-9.jpg', title: 'The Estate', sub: 'Majestic Living' }
+            { img: 'images/villa 8/villa-4.jpg', title: 'Nyumba Malaika', sub: 'Majestic Living' },
+            { img: 'images/villa 8/villa-5.jpg', title: 'Nyumba Malaika', sub: 'Majestic Living' },
+            { img: 'images/villa 8/villa-6.jpg', title: 'Nyumba Malaika', sub: 'Majestic Living' },
+            { img: 'images/villa 8/villa-7.jpg', title: 'Nyumba Malaika', sub: 'Majestic Living' },
+            { img: 'images/villa 8/villa-8.jpg', title: 'Nyumba Malaika', sub: 'Majestic Living' },
+            { img: 'images/villa 8/villa-9.jpg', title: 'Nyumba Malaika', sub: 'Majestic Living' }
         ]
     },
     'azure-palm': {
-        name: 'Nyumba Malaika - Azure Palm',
+        name: 'Nyumba Malaika',
         location: 'Jacaranda, Kenya',
         price: '450',
         description: 'A serene coastal escape in Watamu, featuring breathtaking views of the Indian Ocean and Swahili-inspired architecture.',
@@ -189,12 +189,12 @@ const villaData = {
         ],
         amenities: ['Oceanfront Pool', 'Private Beach Access', 'Personal Chef', 'High-Speed Wi-Fi'],
         gallery: [
-            { img: 'images/villa 9/villa-4.jpg', title: 'Ocean View', sub: 'Infinite Horizon' },
-            { img: 'images/villa 9/villa-5.jpg', title: 'Ocean View', sub: 'Infinite Horizon' },
-            { img: 'images/villa 9/villa-6.jpg', title: 'Ocean View', sub: 'Infinite Horizon' },
-            { img: 'images/villa 9/villa-7.jpg', title: 'Ocean View', sub: 'Infinite Horizon' },
-            { img: 'images/villa 9/villa-8.jpg', title: 'Ocean View', sub: 'Infinite Horizon' },
-            { img: 'images/villa 9/villa-9.jpg', title: 'Ocean View', sub: 'Infinite Horizon' }
+            { img: 'images/villa 9/villa-4.jpg', title: 'Nyumba Malaika', sub: 'Infinite Horizon' },
+            { img: 'images/villa 9/villa-5.jpg', title: 'Nyumba Malaika', sub: 'Infinite Horizon' },
+            { img: 'images/villa 9/villa-6.jpg', title: 'Nyumba Malaika', sub: 'Infinite Horizon' },
+            { img: 'images/villa 9/villa-7.jpg', title: 'Nyumba Malaika', sub: 'Infinite Horizon' },
+            { img: 'images/villa 9/villa-8.jpg', title: 'Nyumba Malaika', sub: 'Infinite Horizon' },
+            { img: 'images/villa 9/villa-9.jpg', title: 'Nyumba Malaika', sub: 'Infinite Horizon' }
         ]
     }
 };
