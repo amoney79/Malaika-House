@@ -212,7 +212,21 @@ const safariData = {
             { day: '03', title: 'Sunrise Drive & Departure', desc: 'Final game drive at dawn.' }
         ],
         gallery: [
-            { img: 'images/safari-grid-2.jpg', title: 'Red Elephants', sub: 'Wild sightings' }
+            { img: 'images/amboseli/amboseli-1.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-2.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-3.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-4.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-5.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-6.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-7.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-8.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-9.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-10.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-11.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-12.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-13.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-14.jpg', title: 'Red Elephants', sub: 'Wild sightings' },
+            { img: 'images/amboseli/amboseli-15.jpg', title: 'Red Elephants', sub: 'Wild sightings' }
         ]
     },
     'great-migration': {
@@ -227,7 +241,21 @@ const safariData = {
             { day: '05', title: 'Farewell Serengeti', desc: 'Morning drive and fly back.' }
         ],
         gallery: [
-            { img: 'images/Safari-grid-1.jpg', title: 'Mara River Crossing', sub: 'Dramatic Moment' }
+            { img: 'images/kenya/kenya-1.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-2.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-3.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-4.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-5.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-6.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-7.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-8.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-9.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-10.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-11.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-12.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-13.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-14.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/kenya/kenya-15.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' }
         ]
     },
     'kilimanjaro-shadows': {
@@ -241,7 +269,21 @@ const safariData = {
             { day: '02', title: 'Giant Tuskers', desc: 'Observing world-famous elephant herds.' }
         ],
         gallery: [
-            { img: 'images/safari-grid-3.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' }
+            { img: 'images/tsavo/tsavo-1.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-2.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-3.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-4.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-5.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-6.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-7.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-8.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-9.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-10.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-11.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-12.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-13.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-14.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' },
+            { img: 'images/tsavo/tsavo-15.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' }
         ]
     },
     'maasai-mara-echo': {
@@ -255,11 +297,26 @@ const safariData = {
             { day: '02-03', title: 'Endless Plains', desc: 'Extensive tracking of the Big Five.' }
         ],
         gallery: [
-            { img: 'images/safari-grid-4.jpg', title: 'Lioness', sub: 'Mara Plains' }
+            { img: 'images/nakuru/nakuru-1.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-2.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-3.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-4.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-5.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-6.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-7.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-8.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-9.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-10.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-11.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-12.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-13.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-14.jpg', title: 'Lioness', sub: 'Mara Plains' },
+            { img: 'images/nakuru/nakuru-15.jpg', title: 'Lioness', sub: 'Mara Plains' }
+
         ]
     },
     'samburu-secrets': {
-        name: 'Samburu Secrets',
+        name: 'Marine & Acquatic Tours',
         location: 'Samburu NR',
         price: '1,100',
         description: 'Rare wildlife encounters in Northern Kenya.',
@@ -269,12 +326,26 @@ const safariData = {
             { day: '02', title: 'Special Five', desc: 'Spotting the endemic species of Samburu.' }
         ],
         gallery: [
-            { img: 'images/safari-grid-5.jpg', title: 'Gerenuk', sub: 'Samburu Special' }
+            { img: 'images/marine/marine-1.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-2.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-3.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-4.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-5.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-6.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-7.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-8.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-9.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-10.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-11.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-12.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-13.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-14.jpg', title: 'Gerenuk', sub: 'Samburu Special' },
+            { img: 'images/marine/marine-15.jpg', title: 'Gerenuk', sub: 'Samburu Special' }
         ]
     },
     'pink-lake-safari': {
-        name: 'Pink Lake Safari',
-        location: 'Lake Nakuru NP',
+        name: 'Maasai Mara Safari',
+        location: 'Maasai Mara NP',
         price: '850',
         description: 'Flamingos and rhino sanctuary.',
         mainImage: 'images/safari-grid-6.jpg',
@@ -283,7 +354,21 @@ const safariData = {
             { day: '02', title: 'Lake Exploration', desc: 'Game drives around the lake shore.' }
         ],
         gallery: [
-            { img: 'images/safari-grid-6.jpg', title: 'Flamingos', sub: 'Pink Horizon' }
+            { img: 'images/maasai/maasai-1.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-2.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-3.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-4.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-5.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-6.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-7.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-8.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-9.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-10.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-11.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-12.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-13.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-14.jpg', title: 'Flamingos', sub: 'Pink Horizon' },
+            { img: 'images/maasai/maasai-15.jpg', title: 'Flamingos', sub: 'Pink Horizon' }
         ]
     },
     'gorge-exploration': {
@@ -300,7 +385,7 @@ const safariData = {
         ]
     },
     'born-free-safari': {
-        name: 'Born Free Safari',
+        name: 'Exploration Safari',
         location: 'Meru NP',
         price: '900',
         description: 'Follow the footsteps of George and Joy Adamson.',
@@ -310,7 +395,21 @@ const safariData = {
             { day: '02', title: 'Tracking Lions', desc: 'Exploring the diverse habitats of Meru.' }
         ],
         gallery: [
-            { img: 'images/safari-grid-8.jpg', title: 'Meru Wilds', sub: 'Born Free' }
+            { img: 'images/exploration/exporation-1.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-2.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-3.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-4.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-5.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-6.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-7.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-8.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-9.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-10.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-11.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-12.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-13.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-14.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exporation-15.jpg', title: 'Meru Wilds', sub: 'Born Free' }
         ]
     },
     'heritage-tour': {
