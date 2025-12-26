@@ -200,12 +200,12 @@ const villaData = {
 };
 
 const safariData = {
-    'red-earth': {
+    'amboseli-safaris': {
         name: 'Amboseli National Parks Safari',
         location: 'Amboseli, Kenya',
         price: '1,200',
         description: 'Discover the famous red elephants of Tsavo and experience the ultimate wilderness adventure.',
-        mainImage: 'images/safari-grid-2.jpg',
+        mainImage: 'images/safari-grid-1.jpg',
         timeline: [
             { day: '01', title: 'Arrival & Amboseli Entry', desc: 'Transfer from the coast to Tsavo East.' },
             { day: '02', title: 'Big Five Tracking', desc: 'Full day of exploration.' },
@@ -229,12 +229,12 @@ const safariData = {
             { img: 'images/amboseli/amboseli-15.jpg', title: 'Red Elephants', sub: 'Wild sightings' }
         ]
     },
-    'great-migration': {
+    'kenya-safaris': {
         name: 'Kenya Safaris',
         location: 'Kenya ',
         price: '1,800',
         description: 'Witness the largest mass movement of land mammals on earth.',
-        mainImage: 'images/Safari-grid-1.jpg',
+        mainImage: 'images/Safari-grid-2.jpg',
         timeline: [
             { day: '01', title: 'Fly-in Safari', desc: 'Arrival at Serengeti airstrip.' },
             { day: '02-04', title: 'Following the Herd', desc: 'Daily drives to witness crossing.' },
@@ -258,7 +258,7 @@ const safariData = {
             { img: 'images/kenya/kenya-15.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' }
         ]
     },
-    'kilimanjaro-shadows': {
+    'tsavo-safaris': {
         name: 'Tsavo National Park Safari',
         location: 'Tsavo',
         price: '950',
@@ -286,8 +286,8 @@ const safariData = {
             { img: 'images/tsavo/tsavo-15.jpg', title: 'Elephant Herd', sub: 'Mountain Shadows' }
         ]
     },
-    'maasai-mara-echo': {
-        name: 'Lake Nakuru Safari',
+    'lake-nakuru-safaris': {
+        name: 'Lake Nakuru Safaris',
         location: 'Nakuru',
         price: '1,500',
         description: 'Premium big five tracking and cultural visits.',
@@ -315,12 +315,12 @@ const safariData = {
 
         ]
     },
-    'samburu-secrets': {
+    'marine-safaris': {
         name: 'Marine & Acquatic Tours',
-        location: 'Samburu NR',
+        location: 'Marine NP',
         price: '1,100',
         description: 'Rare wildlife encounters in Northern Kenya.',
-        mainImage: 'images/safari-grid-5.jpg',
+        mainImage: 'images/safari-grid-6.jpg',
         timeline: [
             { day: '01', title: 'Northern Frontier', desc: 'Journey to the arid north.' },
             { day: '02', title: 'Special Five', desc: 'Spotting the endemic species of Samburu.' }
@@ -343,12 +343,12 @@ const safariData = {
             { img: 'images/marine/marine-15.jpg', title: 'Gerenuk', sub: 'Samburu Special' }
         ]
     },
-    'pink-lake-safari': {
+    'maasai-mara-safaris': {
         name: 'Maasai Mara Safari',
         location: 'Maasai Mara NP',
         price: '850',
         description: 'Flamingos and rhino sanctuary.',
-        mainImage: 'images/safari-grid-6.jpg',
+        mainImage: 'images/safari-grid-7.jpg',
         timeline: [
             { day: '01', title: 'Rift Valley Descent', desc: 'Scenic drive to Lake Nakuru.' },
             { day: '02', title: 'Lake Exploration', desc: 'Game drives around the lake shore.' }
@@ -371,49 +371,8 @@ const safariData = {
             { img: 'images/maasai/maasai-15.jpg', title: 'Flamingos', sub: 'Pink Horizon' }
         ]
     },
-    'gorge-exploration': {
-        name: 'Gorge Exploration',
-        location: 'Hell\'s Gate NP',
-        price: '600',
-        description: 'Cycling and rock climbing.',
-        mainImage: 'images/safari-grid-7.jpg',
-        timeline: [
-            { day: '01', title: 'Geothermal Valley', desc: 'Cycling through the gorge.' }
-        ],
-        gallery: [
-            { img: 'images/safari-grid-7.jpg', title: 'The Gorge', sub: 'Rock Climbing' }
-        ]
-    },
-    'born-free-safari': {
-        name: 'Exploration Safari',
-        location: 'Meru NP',
-        price: '900',
-        description: 'Follow the footsteps of George and Joy Adamson.',
-        mainImage: 'images/safari-grid-8.jpg',
-        timeline: [
-            { day: '01', title: 'Wild Meru', desc: 'Check-in at the remote Elsa\'s Kopje.' },
-            { day: '02', title: 'Tracking Lions', desc: 'Exploring the diverse habitats of Meru.' }
-        ],
-        gallery: [
-            { img: 'images/exploration/exporation-1.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-2.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-3.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-4.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-5.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-6.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-7.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-8.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-9.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-10.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-11.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-12.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-13.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-14.jpg', title: 'Meru Wilds', sub: 'Born Free' },
-            { img: 'images/exploration/exporation-15.jpg', title: 'Meru Wilds', sub: 'Born Free' }
-        ]
-    },
-    'heritage-tour': {
-        name: 'Heritage Tour',
+    'heritage-tours': {
+        name: 'Heritage Tours',
         location: 'Museums & Ruins',
         price: '150',
         description: 'Discover the Swahili history at Gede Ruins and Malindi Museum.',
@@ -428,15 +387,45 @@ const safariData = {
             { img: 'images/ruins/ruins-4.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
             { img: 'images/ruins/ruins-5.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
             { img: 'images/ruins/ruins-6.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
-            { img: 'images/safari-grid-7.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
-            { img: 'images/safari-grid-8.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
-            { img: 'images/safari-grid-9.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
-            { img: 'images/safari-grid-10.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
-            { img: 'images/safari-grid-11.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
-            { img: 'images/safari-grid-12.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
-            { img: 'images/safari-grid-13.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
-            { img: 'images/safari-grid-14.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
-            { img: 'images/safari-grid-15.jpg', title: 'Ancient Gede', sub: 'Swahili History' }
+            { img: 'images/ruins/ruins-7.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/ruins/ruins-8.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/ruins/ruins-9.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/ruins/ruins-10.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/ruins/ruins-11.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/ruins/ruins-12.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/ruins/ruins-13.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/ruins/ruins-14.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/ruins/ruins-15.jpg', title: 'Ancient Gede', sub: 'Swahili History' },
+            { img: 'images/ruins/ruins-16.jpg', title: 'Ancient Gede', sub: 'Swahili History' }
+
+        ]
+    },
+    'giraffe-centre-safari': {
+        name: 'Exploration Safaris',
+        location: 'Meru NP',
+        price: '900',
+        description: 'Follow the footsteps of George and Joy Adamson.',
+        mainImage: 'images/safari-grid-8.jpg',
+        timeline: [
+            { day: '01', title: 'Wild Meru', desc: 'Check-in at the remote Elsa\'s Kopje.' },
+            { day: '02', title: 'Tracking Lions', desc: 'Exploring the diverse habitats of Meru.' }
+        ],
+        gallery: [
+            { img: 'images/exploration/exploration-1.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-2.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-3.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-4.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-5.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-6.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-7.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-8.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-9.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-10.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-11.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-12.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-13.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-14.jpg', title: 'Meru Wilds', sub: 'Born Free' },
+            { img: 'images/exploration/exploration-15.jpg', title: 'Meru Wilds', sub: 'Born Free' }
         ]
     }
 };
