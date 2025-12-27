@@ -5,7 +5,7 @@ const villaData = {
         price: '450',
         description: 'Elite luxury meets coastal charm. Nyumba Malaika offers the most exclusive experience in Jacaranda with sprawling estates and unmatched privacy.',
         host: 'Eddison',
-        mainImage: 'images/villa-list-3.jpg',
+        mainImage: 'images/villa/villa-1.jpg',
         images: [
             'images/villa 1/villa-1.jpg',
             'images/villa 1/villa-2.jpg',
