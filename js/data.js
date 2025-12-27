@@ -26,7 +26,7 @@ const villaData = {
         location: 'Jacaranda, Kenya',
         price: '950',
         description: 'Our most exclusive premium suite offering unparalleled luxury with personalized concierge service, private spa facilities, and breathtaking panoramic views. Perfect for discerning guests seeking the ultimate coastal experience.',
-        host: 'Amina',
+        host: 'Eddison',
         mainImage: 'images/villa-card-4.jpg',
         images: [
             'images/villa 2/villa-1.jpg',
@@ -48,7 +48,7 @@ const villaData = {
         location: 'Jacaranda, Kenya',
         price: '450',
         description: 'Experience luxury steps away from the ocean. This villa features a private pool, direct beach access, and is located just minutes from the famous Tsavo East National Park safari gate.',
-        host: 'Amina',
+        host: 'Eddison',
         mainImage: 'images/Villa-card-1.jpg',
         images: [
             'images/villa 3/villa-1.jpg',
@@ -70,7 +70,7 @@ const villaData = {
         location: 'Jacaranda, Kenya',
         price: '550',
         description: 'A modern architectural marvel featuring floor-to-ceiling glass walls with panoramic ocean views and ultra-minimalist interiors.',
-        host: 'Sarah',
+        host: 'Eddison',
         mainImage: 'images/Villa-card-2.jpg',
         images: [
             'images/villa 4/villa-1.jpg',
@@ -92,7 +92,7 @@ const villaData = {
         location: 'Jacaranda, Kenya',
         price: '380',
         description: 'A peaceful retreat nestled among ancient coral cliffs with private beach access and lush tropical gardens.',
-        host: 'David',
+        host: 'Eddison',
         mainImage: 'images/Villa-card-3.jpg',
         images: [
             'images/villa 5/villa-1.jpg',
@@ -114,7 +114,7 @@ const villaData = {
         location: 'Jacaranda, Kenya',
         price: '420',
         description: 'A luxurious lodge situated on the edge of Tsavo East, offering front-row seats to the majestic wildlife and African plains.',
-        host: 'Suleiman',
+        host: 'Eddison',
         mainImage: 'images/villa-list-8.jpg',
         images: [
             'images/villa 6/villa-1.jpg',
@@ -136,7 +136,7 @@ const villaData = {
         location: 'Jacaranda, Kenya',
         price: '480',
         description: 'A contemporary villa overlooking the turquoise waters of Kilifi Creek, perfect for water sports enthusiasts and relaxation seekers alike.',
-        host: 'Fatuma',
+        host: 'Eddison',
         mainImage: 'images/villa-list-7.jpg',
         images: [
             'images/villa 7/villa-1.jpg',
@@ -158,7 +158,7 @@ const villaData = {
         location: 'Jacaranda, Kenya',
         price: '600',
         description: 'Elite luxury meets coastal charm. The Royal Palms offers the most exclusive experience in Watamu with sprawling estates and unmatched privacy.',
-        host: 'Amina',
+        host: 'Eddison',
         mainImage: 'images/Villa-card-6.jpg',
         images: [
             'images/villa 8/villa-1.jpg',
@@ -180,7 +180,7 @@ const villaData = {
         location: 'Jacaranda, Kenya',
         price: '450',
         description: 'A serene coastal escape in Watamu, featuring breathtaking views of the Indian Ocean and Swahili-inspired architecture.',
-        host: 'Amina',
+        host: 'Eddison',
         mainImage: 'images/villa-list-4.jpg',
         images: [
             'images/villa 9/villa-1.jpg',
