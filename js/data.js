@@ -115,7 +115,7 @@ const villaData = {
         price: '420',
         description: 'A luxurious lodge situated on the edge of Tsavo East, offering front-row seats to the majestic wildlife and African plains.',
         host: 'Suleiman',
-        mainImage: 'images/villa-card-5.jpg',
+        mainImage: 'images/villa-list-8.jpg',
         images: [
             'images/villa 6/villa-1.jpg',
             'images/villa 6/villa-2.jpg',
@@ -137,7 +137,7 @@ const villaData = {
         price: '480',
         description: 'A contemporary villa overlooking the turquoise waters of Kilifi Creek, perfect for water sports enthusiasts and relaxation seekers alike.',
         host: 'Fatuma',
-        mainImage: 'images/villa-card-8.jpg',
+        mainImage: 'images/villa-list-7.jpg',
         images: [
             'images/villa 7/villa-1.jpg',
             'images/villa 7/villa-2.jpg',
